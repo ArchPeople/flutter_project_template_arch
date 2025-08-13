@@ -3,11 +3,16 @@ import 'package:flutter_project_template_arch/core/data/remote/demo_data/demo_da
 import 'package:flutter_project_template_arch/core/data/remote/demo_data/dto/demo_data_response.dart';
 import 'package:fpdart/fpdart.dart';
 
-class DemoFeatureRepository {
+abstract class DemoFeatureRepository {
+  ApiResult<DemoDataResponse> getDemoData();
+}
+
+class DemoFeatureRepositoryImpl implements DemoFeatureRepository {
   final DemoData demoData;
 
-  DemoFeatureRepository({required this.demoData});
+  DemoFeatureRepositoryImpl({required this.demoData});
   
+  @override
   ApiResult<DemoDataResponse> getDemoData() async {
     final result = await demoData.fetchDemoData();
     return result.match(
