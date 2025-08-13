@@ -20,11 +20,11 @@ To ease your project setup, here you can find:
 - ✅ Easy to use [bloc](https://pub.dev/packages/flutter_bloc) design pattern (see [demo_feature](lib/features/demo_feature) for example)
 - ✅ "Functional" functional programming with [fpdart](https://pub.dev/packages/fpdart)
 - ✅ Simple & reliable local data source storage with [shared_preferences](https://pub.dev/packages/shared_prefences)
-- ✅ Precise object models with [equatable](https://pub.dev/packages/equatable)
+- ✅ Comparable object models with [equatable](https://pub.dev/packages/equatable)
 - ✅ Manageable dependency injection with [get_it](https://pub.dev/packages/get_it)
-- ✅ Assortment of ready-to-use themes for styling (see [themes](lib/themes) for example)
+- ✅ Assortment of ready-to-use themes for styling (see [themes](lib/app/themes) for example)
 - ✅ Helpful utilities and extensions (see [general_helpers](lib/core/general_helpers) for example)
-- ✅ Structured atomic design pattern for widgets (see [widgets](lib/widgets) for example)
+- ✅ Structured atomic design pattern for widgets (see [widgets](lib/app/widgets) for example)
 
 Ready to give your project identities? here you can:
 
@@ -42,7 +42,7 @@ Check the [pubspec.yaml](pubspec.yaml) for packages versions.
 These are the requirements to run this template:
 
 - Java minimum version 17
-- Flutter version 3.32.7
+- Flutter version 3.32.8
 - dart version 3.8.1
 - Android Studio minimum version Meerkat 2024.3.1
 - Xcode up minimum version 16.4
@@ -61,7 +61,7 @@ Change your package name:
 dart run change_app_package_name:main com.new.package.name
 ```
 
-Search for "flutter_project_template_arch" and rename it with your repository name
+Search for "flutter_project_template_arch" and rename it with your github repository name
 
 ## Change app name (First time change) 📲
 
@@ -113,3 +113,6 @@ To run the app, do:
 ```bash
 flutter run
 ```
+
+> [!IMPORTANT]
+> Once you are ready to build the app, don't forget to delete the .env file after you've generated the config. Else, your .env file's contents will be shown if the app is being decompiled
