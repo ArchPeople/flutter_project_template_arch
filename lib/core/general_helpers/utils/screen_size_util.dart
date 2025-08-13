@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_project_template_arch/themes/device_dimension/theme_device_dimension.dart';
+import 'package:flutter_project_template_arch/app/themes/device_dimension/theme_device_dimension.dart';
 
 class ScreenSizeUtil {
   ScreenSizeUtil._();

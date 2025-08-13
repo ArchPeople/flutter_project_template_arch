@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template_arch/assets/colors/asset_colors.dart';
+import 'package:flutter_project_template_arch/app/assets/colors/asset_colors.dart';
 import 'package:flutter_project_template_arch/core/general_helpers/extensions/dynamic_size_extension.dart';
-import 'package:flutter_project_template_arch/themes/system_mode/theme_system_mode.dart';
-import 'package:flutter_project_template_arch/widgets/atoms/text/text_base.dart';
+import 'package:flutter_project_template_arch/app/themes/system_mode/theme_system_mode.dart';
+import 'package:flutter_project_template_arch/app/widgets/atoms/text/text_base.dart';
 
 class ButtonBase extends StatelessWidget {
   final String accessibilityLabel;

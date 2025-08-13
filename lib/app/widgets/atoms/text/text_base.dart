@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template_arch/assets/colors/asset_colors.dart';
-import 'package:flutter_project_template_arch/themes/fonts/theme_fonts.dart';
-import 'package:flutter_project_template_arch/themes/system_mode/theme_system_mode.dart';
+import 'package:flutter_project_template_arch/app/assets/colors/asset_colors.dart';
+import 'package:flutter_project_template_arch/app/themes/fonts/theme_fonts.dart';
+import 'package:flutter_project_template_arch/app/themes/system_mode/theme_system_mode.dart';
 
 class TextBase extends StatelessWidget {
   final String accessibilityLabel;

@@ -1,3 +1,4 @@
+import 'package:flutter_project_template_arch/core/data/local/storage_key/storage_key.dart';
 import 'package:flutter_project_template_arch/core/services/local_storage/local_storage.dart';
 
 class AppStatusData {
@@ -5,7 +6,7 @@ class AppStatusData {
 
   AppStatusData({required this.localStorage});
 
-  final String _key = 'app_status_data';
+  final String _key = StorageKey.appStatusStorageKey;
 
   Future<void> setAppStatusData({required bool value}) async {
     await localStorage.setValue(key: _key, value: value.toString());
