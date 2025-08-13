@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template_arch/assets/colors/asset_colors.dart';
+import 'package:flutter_project_template_arch/app/assets/colors/asset_colors.dart';
 import 'package:flutter_project_template_arch/core/general_helpers/extensions/dynamic_size_extension.dart';
-import 'package:flutter_project_template_arch/themes/border/theme_border.dart';
-import 'package:flutter_project_template_arch/themes/padding/theme_padding.dart';
-import 'package:flutter_project_template_arch/widgets/atoms/gap/gap.dart';
-import 'package:flutter_project_template_arch/widgets/molecules/action_panel.dart';
+import 'package:flutter_project_template_arch/app/themes/border/theme_border.dart';
+import 'package:flutter_project_template_arch/app/themes/padding/theme_padding.dart';
+import 'package:flutter_project_template_arch/app/widgets/atoms/gap/gap.dart';
+import 'package:flutter_project_template_arch/app/widgets/molecules/action_panel.dart';
 
 class StatusControllerWidget extends StatelessWidget {
   final String title;

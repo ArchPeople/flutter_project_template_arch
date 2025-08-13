@@ -3,8 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_project_template_arch/core/dependencies/injection.dart';
 import 'package:flutter_project_template_arch/core/services/api_fetch/api_fetch.dart';
 import 'package:flutter_project_template_arch/core/general_helpers/utils/screen_size_util.dart';
-import 'package:flutter_project_template_arch/navigation/router.dart';
-import 'package:flutter_project_template_arch/themes/system_mode/theme_system_mode.dart';
+import 'package:flutter_project_template_arch/app/navigation/router.dart';
+import 'package:flutter_project_template_arch/app/themes/system_mode/theme_system_mode.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

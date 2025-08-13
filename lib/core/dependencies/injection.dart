@@ -26,7 +26,7 @@ class Injection {
 
     /// Repository /////////////////////////
     getIt.registerLazySingleton<DemoFeatureRepository>(
-      () => DemoFeatureRepository(demoData: getIt<DemoData>()),
+      () => DemoFeatureRepositoryImpl(demoData: getIt<DemoData>()),
     );
   }
 }

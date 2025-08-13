@@ -7,6 +7,8 @@ class Config {
   // Navigator Key
   static GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
+  static String demoDomain = 'https://reactnative.dev';
+
   // Environment (Add more if you add more keys in the env.dart file)
   static String demo = Env.demo;
 }

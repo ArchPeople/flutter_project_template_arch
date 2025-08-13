@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_template_arch/core/general_helpers/utils/screen_size_util.dart';
-import 'package:flutter_project_template_arch/themes/padding/theme_padding.dart';
-import 'package:flutter_project_template_arch/widgets/atoms/bottom_sheet/bottom_sheet_base.dart';
-import 'package:flutter_project_template_arch/widgets/atoms/dialog/dialog_base.dart';
+import 'package:flutter_project_template_arch/app/themes/padding/theme_padding.dart';
+import 'package:flutter_project_template_arch/app/widgets/atoms/bottom_sheet/bottom_sheet_base.dart';
+import 'package:flutter_project_template_arch/app/widgets/atoms/dialog/dialog_base.dart';
 
 class ShowWidgetUtil {
   ShowWidgetUtil._();

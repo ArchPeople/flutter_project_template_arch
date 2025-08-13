@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template_arch/assets/colors/asset_colors.dart';
+import 'package:flutter_project_template_arch/app/assets/colors/asset_colors.dart';
 import 'package:flutter_project_template_arch/core/general_helpers/utils/screen_size_util.dart';
-import 'package:flutter_project_template_arch/themes/border/theme_border.dart';
-import 'package:flutter_project_template_arch/themes/padding/theme_padding.dart';
+import 'package:flutter_project_template_arch/app/themes/border/theme_border.dart';
+import 'package:flutter_project_template_arch/app/themes/padding/theme_padding.dart';
 
 class DialogBase extends StatelessWidget {
   final EdgeInsetsGeometry? margin;
