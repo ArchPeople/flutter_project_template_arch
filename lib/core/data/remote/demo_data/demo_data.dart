@@ -2,7 +2,7 @@ import 'package:flutter_project_template_arch/core/common/type_def/api_result_ty
 import 'package:flutter_project_template_arch/core/common/base/base_failure_response.dart';
 import 'package:flutter_project_template_arch/core/config/config.dart';
 import 'package:flutter_project_template_arch/core/data/remote/demo_data/dto/demo_data_response.dart';
-import 'package:flutter_project_template_arch/core/data/remote/api_path/api_path.dart';
+import 'package:flutter_project_template_arch/core/data/remote/api_path.dart';
 import 'package:flutter_project_template_arch/core/services/api_fetch/api_fetch.dart';
 import 'package:fpdart/fpdart.dart';
 
