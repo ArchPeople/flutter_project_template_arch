@@ -1,4 +1,4 @@
-import 'package:flutter_project_template_arch/core/data/local/storage_key/storage_key.dart';
+import 'package:flutter_project_template_arch/core/data/local/storage_key.dart';
 import 'package:flutter_project_template_arch/core/services/local_storage/local_storage.dart';
 
 class AppStatusData {
