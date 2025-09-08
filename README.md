@@ -12,7 +12,7 @@ Or download via [releases](https://github.com/michmadheo/flutter_project_templat
 
 ## What's included 🚀
 
-To ease your project setup, here you can find:
+Essentials to ease your project setup. Here you can find:
 
 - ✅ Swift Navigation & routing with [go_router](https://pub.dev/packages/go_router)
 - ✅ Safe environment configuration with [envied](https://pub.dev/packages/envied)
@@ -42,8 +42,8 @@ Check the [pubspec.yaml](pubspec.yaml) for packages versions.
 These are the requirements to run this template:
 
 - Java minimum version 17
-- Flutter version 3.35.2
-- dart version 3.9.0
+- Flutter version 3.35.3
+- dart version 3.9.2
 - Android Studio minimum version Meerkat 2024.3.1
 - Xcode up minimum version 16.4
 
