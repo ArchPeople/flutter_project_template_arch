@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_project_template_arch/app/assets/colors/asset_colors.dart';
+import 'package:flutter_project_template_arch/app/global/system_mode/system_mode_cubit.dart';
 import 'package:flutter_project_template_arch/core/general_helpers/extensions/dynamic_size_extension.dart';
 import 'package:flutter_project_template_arch/app/themes/system_mode/theme_system_mode.dart';
 import 'package:flutter_project_template_arch/app/widgets/atoms/text/text_base.dart';
@@ -34,15 +36,14 @@ class ButtonBase extends StatelessWidget {
     this.disabled = false,
   });
 
-  Color getForegroundColor(BuildContext context) {
+  Color getForegroundColor(ThemeMode systemMode) {
     if (disabled) {
       return AssetColors.grey;
     } else {
-      if (foregroundColor != null &&
-          Theme.of(context).brightness == ThemeSystemMode.lightBrightness) {
+      if (foregroundColor != null && systemMode == ThemeSystemMode.light) {
         return foregroundColor!;
       } else if (foregroundDarkColor != null &&
-          Theme.of(context).brightness == ThemeSystemMode.darkBrightness) {
+          systemMode == ThemeSystemMode.dark) {
         return foregroundDarkColor!;
       } else {
         return AssetColors.white;
@@ -50,18 +51,17 @@ class ButtonBase extends StatelessWidget {
     }
   }
 
-  Color getBackgroundColor(BuildContext context) {
+  Color getBackgroundColor(ThemeMode systemMode) {
     if (disabled) {
       return AssetColors.lightGrey;
     } else {
-      if (backgroundColor != null &&
-          Theme.of(context).brightness == ThemeSystemMode.lightBrightness) {
+      if (backgroundColor != null && systemMode == ThemeSystemMode.light) {
         return backgroundColor!;
       } else if (backgroundDarkColor != null &&
-          Theme.of(context).brightness == ThemeSystemMode.darkBrightness) {
+          systemMode == ThemeSystemMode.dark) {
         return backgroundDarkColor!;
       } else {
-        if (Theme.of(context).brightness == ThemeSystemMode.lightBrightness) {
+        if (systemMode == ThemeSystemMode.light) {
           return AssetColors.blue;
         } else {
           return AssetColors.purple;
@@ -72,25 +72,29 @@ class ButtonBase extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Semantics(
-      excludeSemantics: true,
-      label: 'button-$accessibilityLabel',
-      child: SizedBox(
-        width: width ?? double.infinity,
-        height: height ?? 40.ds,
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: getBackgroundColor(context),
+    return BlocBuilder<SystemModeCubit, SystemModeState>(
+      builder: (context, state) {
+        return Semantics(
+          excludeSemantics: true,
+          label: 'button-$accessibilityLabel',
+          child: SizedBox(
+            width: width ?? double.infinity,
+            height: height ?? 40.ds,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: getBackgroundColor(state.systemMode),
+              ),
+              onPressed: disabled ? null : onPressed,
+              onLongPress: onLongPress,
+              child: TextBase(
+                label: label!,
+                color: getForegroundColor(state.systemMode),
+                style: labelStyle,
+              ),
+            ),
           ),
-          onPressed: disabled ? null : onPressed,
-          onLongPress: onLongPress,
-          child: TextBase(
-            label: label!,
-            color: getForegroundColor(context),
-            style: labelStyle,
-          ),
-        ),
-      ),
+        );
+      },
     );
   }
 }

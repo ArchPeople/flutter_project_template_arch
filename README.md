@@ -14,6 +14,7 @@ Or download via [releases](https://github.com/michmadheo/flutter_project_templat
 
 Essentials to ease your project setup. Here you can find:
 
+- ✅ Flutter 3.35.3, compiled with the latest [Flutter](https://docs.flutter.dev/install/archive) version
 - ✅ Swift Navigation & routing with [go_router](https://pub.dev/packages/go_router)
 - ✅ Safe environment configuration with [envied](https://pub.dev/packages/envied)
 - ✅ Robust API Fetching with [dio](https://pub.dev/packages/dio)
@@ -25,6 +26,7 @@ Essentials to ease your project setup. Here you can find:
 - ✅ Assortment of ready-to-use themes for styling (see [themes](lib/app/themes) for example)
 - ✅ Helpful utilities and extensions (see [general_helpers](lib/core/general_helpers) for example)
 - ✅ Structured atomic design pattern for widgets (see [widgets](lib/app/widgets) for example)
+- ✅ Everyone's favorite dark mode, is supported (see [system_mode_cubit](lib/app/global/system_mode/system_mode_cubit.dart) global cubit for usage)
 
 Ready to give your project identities? here you can:
 
