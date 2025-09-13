@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_project_template_arch/app/global/system_mode/system_mode_cubit.dart';
 import 'package:flutter_project_template_arch/core/dependencies/injection.dart';
 import 'package:flutter_project_template_arch/core/services/api_fetch/api_fetch.dart';
 import 'package:flutter_project_template_arch/core/general_helpers/utils/screen_size_util.dart';
@@ -29,11 +31,18 @@ class MyApp extends StatelessWidget {
     /// Initialize dynamic screen size
     ScreenSizeUtil.initializeScreenSize(context);
 
-    return MaterialApp.router(
-      themeMode: ThemeSystemMode.system,
-      theme: ThemeSystemMode.lightConfig,
-      darkTheme: ThemeSystemMode.darkConfig,
-      routerConfig: router,
+    return MultiBlocProvider(
+      providers: [BlocProvider(create: (context) => SystemModeCubit())],
+      child: BlocBuilder<SystemModeCubit, SystemModeState>(
+        builder: (context, state) {
+          return MaterialApp.router(
+            themeMode: state.systemMode,
+            theme: ThemeSystemMode.lightConfig,
+            darkTheme: ThemeSystemMode.darkConfig,
+            routerConfig: router,
+          );
+        },
+      ),
     );
   }
 }
