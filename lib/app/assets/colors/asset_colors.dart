@@ -13,4 +13,8 @@ class AssetColors {
   static const yellow = Color(0xffFFEB3B);
   static const orange = Color(0xffFF9800);
   static const purple = Color(0xff9C27B0);
+  static const lightYellow = Color(0xFFFFD85A);
+  static const lightRed = Color(0xFFFF7D7D);
+  static const maroonRed = Color(0xFF2F0018);
+  static const darkPurple = Color(0xFF300F45);
 }
