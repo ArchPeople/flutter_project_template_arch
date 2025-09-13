@@ -5,14 +5,20 @@ import 'package:flutter_project_template_arch/features/demo_feature/view/demo_fe
 import 'package:flutter_project_template_arch/app/navigation/object/demo_navigation_object.dart';
 import 'package:flutter_project_template_arch/app/navigation/observer/navigation_observer.dart';
 import 'package:flutter_project_template_arch/app/navigation/path/navigation_path.dart';
+import 'package:flutter_project_template_arch/features/landing/view/landing_view.dart';
 import 'package:go_router/go_router.dart';
 
 final router = GoRouter(
-  initialLocation: NavigationPath
-      .demoFeature, // Change this to your initial route, usually the splash screen
+  initialLocation: NavigationPath.landing,
   navigatorKey: Config.navigatorKey,
   observers: [NavigationObserver()],
   routes: [
+    GoRoute(
+      path: NavigationPath.landing,
+      builder: (context, state) {
+        return LandingView();
+      },
+    ),
     GoRoute(
       path: NavigationPath.demoFeature,
       builder: (context, state) {

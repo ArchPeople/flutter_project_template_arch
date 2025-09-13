@@ -1,6 +1,6 @@
 class NavigationPath {
   NavigationPath._();
 
-  static String initialRoute = '/';
+  static String landing = '/landing';
   static String demoFeature = '/demo-feature';
 }
