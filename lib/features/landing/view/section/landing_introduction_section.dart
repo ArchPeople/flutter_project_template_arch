@@ -32,7 +32,7 @@ class _LandingIntroductionSectionState
     return BlocBuilder<SystemModeCubit, SystemModeState>(
       builder: (context, state) {
         return AnimatedContainer(
-          duration: const Duration(milliseconds: 150),
+          duration: const Duration(milliseconds: 300),
           width: double.infinity,
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -41,7 +41,7 @@ class _LandingIntroductionSectionState
               colors: [
                 state.systemMode == ThemeSystemMode.light
                     ? AssetColors.lightYellow
-                    : AssetColors.lightRed,
+                    : AssetColors.maroonRed,
                 state.systemMode == ThemeMode.light
                     ? AssetColors.lightRed
                     : AssetColors.darkPurple,
