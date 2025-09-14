@@ -33,10 +33,11 @@ class MyApp extends StatelessWidget {
 
     return MultiBlocProvider(
       providers: [BlocProvider(create: (context) => SystemModeCubit())],
-      child: BlocBuilder<SystemModeCubit, SystemModeState>(
+      child: BlocSelector<SystemModeCubit, SystemModeState, ThemeMode>(
+        selector: (state) => state.systemMode,
         builder: (context, state) {
           return MaterialApp.router(
-            themeMode: state.systemMode,
+            themeMode: state,
             theme: ThemeSystemMode.lightConfig,
             darkTheme: ThemeSystemMode.darkConfig,
             routerConfig: router,
