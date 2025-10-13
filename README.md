@@ -14,7 +14,7 @@ Or download via [releases](https://github.com/michmadheo/flutter_project_templat
 
 Essentials to ease your project setup. Here you can find:
 
-- ✅ Flutter 3.35.4, compiled with the latest [Flutter](https://docs.flutter.dev/install/archive) version
+- ✅ Flutter 3.35.6, compiled with the latest [Flutter](https://docs.flutter.dev/install/archive) version
 - ✅ Swift Navigation & routing with [go_router](https://pub.dev/packages/go_router)
 - ✅ Safe environment configuration with [envied](https://pub.dev/packages/envied)
 - ✅ Robust API Fetching with [dio](https://pub.dev/packages/dio)
@@ -44,7 +44,7 @@ Check the [pubspec.yaml](pubspec.yaml) for packages versions.
 These are the requirements to run this template:
 
 - Java minimum version 17
-- Flutter version 3.35.4
+- Flutter version 3.35.6
 - dart version 3.9.2
 - Android Studio minimum version Meerkat 2024.3.1
 - Xcode up minimum version 16.4
@@ -110,11 +110,19 @@ And generate the env for the config with:
 dart run build_runner build
 ```
 
+If you add another value, before running the above command again, do this first:
+
+```bash
+dart run build_runner clean
+```
+
 To run the app, do:
 
 ```bash
 flutter run
 ```
+
+Or just run via launch.json
 
 > [!IMPORTANT]
 > Once you are ready to build the app, don't forget to delete the .env file after you've generated the config. Else, your .env file's contents will be shown if the app is being decompiled
