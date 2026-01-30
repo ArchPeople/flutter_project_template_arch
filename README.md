@@ -14,7 +14,7 @@ Or download via [releases](https://github.com/michmadheo/flutter_project_templat
 
 Essentials to ease your project setup. Here you can find:
 
-- ✅ Flutter 3.38.4, compiled with the latest [Flutter](https://docs.flutter.dev/install/archive) version
+- ✅ Compiled with the latest [Flutter](https://docs.flutter.dev/install/archive) version (See requirements below)
 - ✅ Swift Navigation & routing with [go_router](https://pub.dev/packages/go_router)
 - ✅ Safe environment configuration with [envied](https://pub.dev/packages/envied)
 - ✅ Robust API Fetching with [dio](https://pub.dev/packages/dio)
@@ -44,7 +44,7 @@ Check the [pubspec.yaml](pubspec.yaml) for packages versions.
 These are the requirements to run this template:
 
 - Java minimum version 17
-- Flutter version 3.38.4
+- Flutter version 3.38.6 - 3.38.9
 - dart version 3.10.3
 - Android Studio minimum version Meerkat 2024.3.1
 - Xcode up minimum version 16.4
@@ -96,13 +96,13 @@ dart run flutter_launcher_icons
 Create a .env file in root project with this example content:
 
 ```bash
-Demo=demo
+DEMO=demo
 OTHER_KEY_1=othervalue1
 OTHER_KEY_2=othervalue2
 ```
 
 > [!WARNING]
-> Please include the 'Demo=demo' if this is the first time you use this template. You can change it later on config
+> Please include the 'DEMO=demo' if this is the first time you use this template. You can change it later on config
 
 And generate the env for the config with:
 
@@ -116,13 +116,16 @@ If you add another value, before running the above command again, do this first:
 dart run build_runner clean
 ```
 
+> [!NOTE]
+> If there's an issue when generating the env for the first time, please comment the demo = Env.demo line on lib/core/config/config.dart first. You can uncomment the line again after generating the env file
+
 To run the app, do:
 
 ```bash
 flutter run
 ```
 
-Or just run via launch.json
+Or just run via the provided launch.json
 
 > [!IMPORTANT]
 > Once you are ready to build the app, don't forget to delete the .env file after you've generated the config. Else, your .env file's contents will be shown if the app is being decompiled
