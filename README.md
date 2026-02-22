@@ -44,8 +44,8 @@ Check the [pubspec.yaml](pubspec.yaml) for packages versions.
 These are the requirements to run this template:
 
 - Java minimum version 17
-- Flutter version 3.38.6 - 3.38.9
-- dart version 3.10.7 - 3.10.8 (Should already be bundled with flutter)
+- Flutter version 3.41.0 - 3.41.2
+- dart version 3.11.0 (Should already be bundled with flutter)
 - Android Studio minimum version Meerkat 2024.3.1
 - Xcode up minimum version 16.4
 
