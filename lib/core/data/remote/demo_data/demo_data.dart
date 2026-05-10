@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter_project_template_arch/core/common/type_def/api_result_type_def.dart';
 import 'package:flutter_project_template_arch/core/common/base/base_failure_response.dart';
 import 'package:flutter_project_template_arch/core/config/config.dart';
@@ -11,10 +12,11 @@ class DemoData {
 
   DemoData({required this.apiFetch});
 
-  ApiResult<DemoDataResponse> fetchDemoData() async {
+  ApiResult<DemoDataResponse> fetchDemoData({CancelToken? cancelToken}) async {
     try {
       final data = await apiFetch.getApi(
         url: '${Config.demoDomain}${ApiPath.demoEndpoint}',
+        cancelToken: cancelToken,
       );
       DemoDataResponse response = DemoDataResponse.fromJson(data);
       return Right(response);

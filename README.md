@@ -15,6 +15,7 @@ Or download via [releases](https://github.com/michmadheo/flutter_project_templat
 Essentials to ease your project setup. Here you can find:
 
 - ✅ Compiled with the latest [Flutter](https://docs.flutter.dev/install/archive) version (See requirements below)
+- ✅ Consistent template for new feature with [mason_cli](https://pub.dev/packages/mason_cli) generator (See requirements below)
 - ✅ Swift Navigation & routing with [go_router](https://pub.dev/packages/go_router)
 - ✅ Safe environment configuration with [envied](https://pub.dev/packages/envied)
 - ✅ Robust API Fetching with [dio](https://pub.dev/packages/dio)
@@ -48,6 +49,7 @@ These are the requirements to run this template:
 - dart version 3.11.0 (Should already be bundled with flutter)
 - Android Studio minimum version Meerkat 2024.3.1
 - Xcode up minimum version 16.4
+- (Optional but recommended) mason_cli version 0.1.3
 
 > [!IMPORTANT]
 > Do not use a Flutter version above the one stated, as breaking changes may occur until we adjust for them.
@@ -129,3 +131,7 @@ Or just run via the provided launch.json
 
 > [!IMPORTANT]
 > Once you are ready to build the app, don't forget to delete the .env file after you've generated the config. Else, your .env file's contents will be shown if the app is being decompiled
+
+## Making a new feature 🧱
+
+See [MASON-GUIDE.md](MASON-GUIDE.md) for guidance. Once you use mason, you'll never go manual ever again.
