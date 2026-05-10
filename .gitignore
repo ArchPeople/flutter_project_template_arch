@@ -47,3 +47,7 @@ app.*.map.json
 # Env
 .env
 lib/core/config/env/env.g.dart
+
+# Mason
+.mason
+mason-lock.json

@@ -1,0 +1,14 @@
+name: feature
+description: mason brick template for new feature.
+
+version: 0.1.0+1
+
+environment:
+  mason: 0.1.2
+
+vars:
+  name:
+    type: string
+    description: Feature name
+    default: new_feature
+    prompt: What is the feature name?
