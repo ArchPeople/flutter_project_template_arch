@@ -29,6 +29,25 @@ android {
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
+    
+    flavorDimensions += "default"
+
+    productFlavors {
+    create("development") {
+        dimension = "default"
+        applicationIdSuffix = ".development"
+        resValue("string", "app_name", "Arch Flutter Dev")
+    }
+    create("staging") {
+        dimension = "default"
+        applicationIdSuffix = ".staging"
+        resValue("string", "app_name", "Arch Flutter Staging")
+    }
+    create("production") {
+        dimension = "default"
+        resValue("string", "app_name", "Arch Flutter")
+    }
+}
 
     buildTypes {
         release {
