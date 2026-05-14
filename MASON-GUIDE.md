@@ -59,6 +59,6 @@ To use Mason, type this:
 mason make feature
 ```
 
-Enter the feature name, for example order detail (mason will automatically change it into order_detail, so no worries)
+A prompt will appear and ask for the feature name. Enter the feature name, for example order detail (mason will automatically change it into order_detail, so no worries)
 
 Mason will then generate all the files, you just have to go to the generated IMPORTANT.md file and copy-paste the code to its specific files.
