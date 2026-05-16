@@ -23,6 +23,7 @@ dependencies:
   fpdart: 1.2.0
   get_it: 9.2.1
   shared_preferences: 2.5.5
+  easy_localization: 3.0.8
 
 dev_dependencies:
   build_runner: 2.15.0
@@ -43,4 +44,5 @@ flutter_launcher_icons:
 flutter:
   assets:
     - assets/images/
+    - assets/translations/
   uses-material-design: true
