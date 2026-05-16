@@ -9,6 +9,8 @@ import 'package:flutter_project_template_arch/core/services/api_fetch/api_fetch.
 import 'package:flutter_project_template_arch/core/general_helpers/utils/screen_size_util.dart';
 import 'package:flutter_project_template_arch/app/navigation/router.dart';
 import 'package:flutter_project_template_arch/app/themes/system_mode/theme_system_mode.dart';
+import 'package:flutter_project_template_arch/core/services/local_storage/local_storage.dart';
+import 'package:hive_ce_flutter/hive_flutter.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,9 +21,11 @@ void main() async {
   /// Initialize Dependency Injection
   Injection().initializeDependencyInjection();
   await EasyLocalization.ensureInitialized();
+  await Hive.initFlutter();
 
   /// Initialize Dio
   getIt<ApiFetch>().initializeDio();
+  getIt<LocalStorage>().openBox();
 
   runApp(
     EasyLocalization(

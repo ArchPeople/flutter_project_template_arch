@@ -8,20 +8,20 @@ class AppStatusData {
 
   final String _key = StorageKey.appStatusStorageKey;
 
-  Future<void> setAppStatusData({required bool value}) async {
-    await localStorage.setValue(key: _key, value: value.toString());
+  void setAppStatusData({required bool value}) {
+    localStorage.setValue(key: _key, value: value.toString());
   }
 
-  Future<bool> getAppStatusData() async {
-    final value = await localStorage.getValue(key: _key);
+  bool getAppStatusData() {
+    final value = localStorage.getValue(key: _key);
     if (value != null) {
       return value == 'true' ? true : false;
     } else {
       return false;
     }
   }
-  
-  Future<void> deleteAppStatusData() async {
-    await localStorage.deleteValue(key: _key);
+
+  void deleteAppStatusData() {
+    localStorage.deleteValue(key: _key);
   }
 }

@@ -22,10 +22,12 @@ dependencies:
   dio: 5.9.2
   fpdart: 1.2.0
   get_it: 9.2.1
-  shared_preferences: 2.5.5
   easy_localization: 3.0.8
+  hive_ce: 2.19.3
+  hive_ce_flutter: 2.3.4
 
 dev_dependencies:
+  hive_ce_generator: 1.11.1
   build_runner: 2.15.0
   flutter_launcher_icons: 0.14.4
   flutter_test:

@@ -21,7 +21,7 @@ Essentials to ease your project setup. Here you can find:
 - ✅ Robust API Fetching with [dio](https://pub.dev/packages/dio)
 - ✅ Easy to use [bloc](https://pub.dev/packages/flutter_bloc) design pattern (see [demo_feature](lib/features/demo_feature) for example)
 - ✅ "Functional" functional programming with [fpdart](https://pub.dev/packages/fpdart)
-- ✅ Simple & reliable local data source storage with [shared_preferences](https://pub.dev/packages/shared_prefences)
+- ✅ Super fast key-value storage with [hive_ce](https://pub.dev/packages/hive_ce)
 - ✅ Comparable object models with [equatable](https://pub.dev/packages/equatable)
 - ✅ Manageable dependency injection with [get_it](https://pub.dev/packages/get_it)
 - ✅ Assortment of ready-to-use themes for styling (see [themes](lib/app/themes) for example)
