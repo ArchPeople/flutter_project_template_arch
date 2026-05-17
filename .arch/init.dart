@@ -72,6 +72,9 @@ Future<void> main() async {
   stdout.write('What is the repository name? ');
   final repoName = stdin.readLineSync()!;
 
+  /// Add .env file
+  File('.env').writeAsStringSync('FLAVOR=development\n');
+
   /// 1. Change the app name and package name
 
   await Process.run('dart', [
@@ -157,8 +160,6 @@ Future<void> main() async {
 
   print('\n✅ Initialization complete!');
   print('\nPlease run this manually before running:');
-  print(
-    '\ndart run .arch/clean.dart && dart run .arch/generate_env.dart',
-  );
+  print('\ndart run .arch/clean.dart && dart run .arch/generate_env.dart');
   print('\nYour app is now ready to run 🚀, Happy coding ~');
 }
