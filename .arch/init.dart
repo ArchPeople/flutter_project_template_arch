@@ -158,7 +158,7 @@ Future<void> main() async {
   print('\n✅ Initialization complete!');
   print('\nPlease run this manually before running:');
   print(
-    '\nflutter pub get && cd ios && pod install --repo-update && cd .. && dart run build_runner build',
+    '\ndart run .arch/clean.dart && dart run .arch/generate_env.dart',
   );
   print('\nYour app is now ready to run 🚀, Happy coding ~');
 }
