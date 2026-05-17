@@ -1,7 +1,7 @@
 import 'dart:io';
 
 Future<void> main() async {
-  print('\n Cleaning the project 🧹')
+  print('\nCleaning the project 🧹');
   final result = await Process.run('sh', [
     '-c',
     'rm -rf ios/Pods && '
@@ -13,4 +13,5 @@ Future<void> main() async {
         'cd ios && pod install --repo-update && '
         'cd ..',
   ], runInShell: true);
+  print('\nProject is now clean ✨');
 }
