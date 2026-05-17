@@ -8,7 +8,7 @@
 
 <div align="center">
   <a href="https://ko-fi.com/michmadheo" target="_blank">
-    <img src="./assets/images/support-me.png" alt="Support me on Ko-fi"  width="150"/>
+    <img src="./assets/images/support-me.png" alt="support me on Ko-fi"  width="150"/>
   </a>
 </div>
 
@@ -43,8 +43,8 @@ These are the requirements to run this template:
 
 Essentials to ease your project setup. Here you can find:
 
-- ✅ Compiled with the latest [Flutter](https://docs.flutter.dev/install/archive) version (See requirements below)
-- ✅ Consistent template for new feature with [mason_cli](https://pub.dev/packages/mason_cli) generator (See requirements below)
+- ✅ Compiled with the latest [Flutter](https://docs.flutter.dev/install/archive) version (See requirements)
+- ✅ Consistent template for new feature with [mason_cli](https://pub.dev/packages/mason_cli) generator (See requirements)
 - ✅ Swift Navigation & routing with [go_router](https://pub.dev/packages/go_router)
 - ✅ Safe environment configuration with [envied](https://pub.dev/packages/envied)
 - ✅ Robust API Fetching with [dio](https://pub.dev/packages/dio)
