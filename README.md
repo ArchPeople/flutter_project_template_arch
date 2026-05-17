@@ -1,14 +1,43 @@
-# Flutter Project Template - "Arch"
+<img src="./assets/images/arch-promo.webp" alt="arch react native" width="100%">
 
-> A Template to start Flutter app development with minimal effort. Introducing the "Arch".
+<div align="center">
+  <h1 align="center">Arch</h1>
+  <h3 align="center">A React Native Project Template</h3>
+  <h6 align="center">Minimalistic • Scalable</h3>
+</div>
+
+<div align="center">
+  <a href="https://ko-fi.com/michmadheo" target="_blank">
+    <img src="./assets/images/support-me.png" alt="Support me on Ko-fi"  width="150"/>
+  </a>
+</div>
 
 ## Quick Start 🎮
+
+In your new project folder:
 
 ```bash
 git clone https://github.com/michmadheo/flutter_project_template_arch.git
 ```
 
 Or download via [releases](https://github.com/michmadheo/flutter_project_template_arch/releases).
+
+## Requirements 🛠️
+
+These are the requirements to run this template:
+
+- Java minimum version 17
+- Flutter version 3.41.9
+- dart version 3.11.5 (Should already be bundled with flutter)
+- Android Studio minimum version Meerkat 2024.3.1
+- Xcode up minimum version 16.4
+- (Optional but recommended) mason_cli version 0.1.3
+
+> [!IMPORTANT]
+> Do not use a Flutter version above the one stated, as breaking changes may occur until we adjust for them.
+
+> [!NOTE]
+> Requirements doesn't match your setup? find another template version in [releases](https://github.com/michmadheo/flutter_project_template_arch/releases).
 
 ## What's included 🚀
 
@@ -29,109 +58,33 @@ Essentials to ease your project setup. Here you can find:
 - ✅ Structured atomic design pattern for widgets (see [widgets](lib/app/widgets) for example)
 - ✅ Everyone's favorite dark mode, is supported (see [system_mode_cubit](lib/app/global/system_mode/system_mode_cubit.dart) global cubit for usage)
 
-Ready to give your project identities? here you can:
-
-- ✅ Change package name with [change_app_package_name](https://pub.dev/packages/change_app_package_name)
-- ✅ Change app icon with [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons)
-- ✅ Change app name by replacing the label... because, why not? 🧐
-
 Check the [pubspec.yaml](pubspec.yaml) for packages versions.
 
 > [!TIP]
 > Didn't like what's included? want to swap packages? feel free to do it!
 
-## Requirements 🛠️
+## Get Started 📦
 
-These are the requirements to run this template:
+After cloning or downloading the project to your project folder, please run:
 
-- Java minimum version 17
-- Flutter version 3.41.9
-- dart version 3.11.5 (Should already be bundled with flutter)
-- Android Studio minimum version Meerkat 2024.3.1
-- Xcode up minimum version 16.4
-- (Optional but recommended) mason_cli version 0.1.3
+```bash
+dart run .arch/init.dart
+```
+
+Follow the prompts and instructions, then everything is ready 🚀
+
+Run the app via [launch.json](.vscode/launch.json)
 
 > [!IMPORTANT]
-> Do not use a Flutter version above the one stated, as breaking changes may occur until we adjust for them.
+> Make sure that .env file exist in root project, for more info please read [how to run](guide/how-to-run.md) guide
 
-> [!NOTE]
-> Requirements doesn't match your setup? find another template version in [releases](https://github.com/michmadheo/flutter_project_template_arch/releases).
+## Guidance library 📚
 
-## Change package name 📦
-
-Change your package name:
-
-```bash
-dart run change_app_package_name:main com.new.package.name
-```
-
-Search for "flutter_project_template_arch" and rename it with your github repository name
-
-## Change app name (First time change) 📲
-
-Search for "Arch Flutter App" and rename it with your app name
-
-## Manual Change app name (Android) 📲
-
-Go to AndroidManifest.xml and change the value of android:label to your app name
-
-## Manual Change app name (iOS) 📲
-
-Go to info.plist and change the value of CFBundleDisplayName and CFBundleName to your app name
-
-## Change app icon ✨
-
-Replace the file below with your app icon:
-
-```bash
-assets/app_icon/icon.png
-```
-
-And then do:
-
-```bash
-dart run flutter_launcher_icons
-```
-
-## Run the app 🎉
-
-Create a .env file in root project with this example content:
-
-```bash
-DEMO=demo
-OTHER_KEY_1=othervalue1
-OTHER_KEY_2=othervalue2
-```
-
-> [!WARNING]
-> Please include the 'DEMO=demo' if this is the first time you use this template. You can change it later on config
-
-And generate the env for the config with:
-
-```bash
-dart run build_runner build
-```
-
-If you add another value, before running the above command again, do this first:
-
-```bash
-dart run build_runner clean
-```
-
-> [!NOTE]
-> If there's an issue when generating the env for the first time, please comment the demo = Env.demo line on lib/core/config/config.dart first. You can uncomment the line again after generating the env file
-
-To run the app, do:
-
-```bash
-flutter run
-```
-
-Or just run via the provided launch.json
+For more guidance, please check the [guide](guide) folder
 
 > [!IMPORTANT]
-> Once you are ready to build the app, don't forget to delete the .env file after you've generated the config. Else, your .env file's contents will be shown if the app is being decompiled
+> Once you are ready to build the app, if you're using generated environment don't forget to delete the .env file after you've generated the config. Else, your .env file's contents will be shown if the app is being decompiled
 
-## Making a new feature 🧱
+## License
 
-See [MASON-GUIDE.md](MASON-GUIDE.md) for guidance. Once you use mason, you'll never go manual ever again.
+[MIT](LICENSE)
