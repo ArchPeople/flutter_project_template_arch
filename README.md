@@ -71,7 +71,7 @@ After cloning or downloading the project to your project folder, please run:
 dart run .arch/init.dart
 ```
 
-<img src="./assets/init.gif" width="200" />
+<img src="./assets/images/init.gif" width="200" />
 
 Follow the prompts and instructions, then everything is ready 🚀
 
