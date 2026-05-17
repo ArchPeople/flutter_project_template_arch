@@ -1,8 +1,8 @@
-<img src="./assets/images/arch-promo.webp" alt="arch react native" width="100%">
+<img src="./assets/images/arch-promo.webp" alt="arch flutter" width="100%">
 
 <div align="center">
   <h1 align="center">Arch</h1>
-  <h3 align="center">A React Native Project Template</h3>
+  <h3 align="center">A Flutter Project Template</h3>
   <h6 align="center">Minimalistic • Scalable</h3>
 </div>
 
@@ -72,7 +72,7 @@ dart run .arch/init.dart
 ```
 
 <p align="center">
-  <img src="./assets/images/init.gif" width="500" />
+  <img src="./assets/images/init.gif" alt="initialization" width="500" />
 </p>
 
 Follow the prompts and instructions, then everything is ready 🚀
