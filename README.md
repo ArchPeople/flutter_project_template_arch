@@ -44,6 +44,7 @@ These are the requirements to run this template:
 Essentials to ease your project setup. Here you can find:
 
 - ✅ Compiled with the latest [Flutter](https://docs.flutter.dev/install/archive) version (See requirements)
+- ✅ Tasty ready-to-use flavors, configured for development, staging & production environment (See [how to run](guide/how-to-run.md) guide)
 - ✅ Consistent template for new feature with [mason_cli](https://pub.dev/packages/mason_cli) generator (See requirements)
 - ✅ Swift Navigation & routing with [go_router](https://pub.dev/packages/go_router)
 - ✅ Safe environment configuration with [envied](https://pub.dev/packages/envied)
