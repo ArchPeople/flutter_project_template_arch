@@ -6,7 +6,7 @@ version: 1.0.0+1
 
 # Supported Flutter: 3.41.9
 environment:
-  sdk: ">=3.11.5 <4.0.0"
+  sdk: "3.11.5"
 
 dependencies:
   flutter:
@@ -15,9 +15,9 @@ dependencies:
   cupertino_icons: 1.0.9
   flutter_bloc: 9.1.1
   go_router: 17.2.3
-  envied: 1.3.4
-  envied_generator: 1.3.4
-  bloc: 9.2.0
+  envied: 1.3.5
+  envied_generator: 1.3.5
+  bloc: 9.2.1
   equatable: 2.0.8
   dio: 5.9.2
   fpdart: 1.2.0
