@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_project_template_arch/app/assets/colors/asset_colors.dart';
@@ -11,6 +12,7 @@ import 'package:flutter_project_template_arch/app/themes/system_mode/theme_syste
 import 'package:flutter_project_template_arch/app/widgets/atoms/button/button_base.dart';
 import 'package:flutter_project_template_arch/app/widgets/atoms/gap/gap.dart';
 import 'package:flutter_project_template_arch/app/widgets/atoms/ink/ink_base.dart';
+import 'package:flutter_project_template_arch/app/widgets/atoms/pressable/pressable_base.dart';
 import 'package:flutter_project_template_arch/app/widgets/atoms/text/text_base.dart';
 import 'package:flutter_project_template_arch/core/general_helpers/extensions/dynamic_size_extension.dart';
 import 'package:flutter_project_template_arch/core/general_helpers/utils/screen_size_util.dart';
@@ -62,13 +64,12 @@ class _LandingIntroductionSectionState
                 ),
                 Gap.height(80.ds),
                 TextBase(
-                  label: 'Welcome to Arch',
+                  label: 'welcome_message'.tr(args: ['Arch']),
                   style: ThemeFonts.h4ExtraBold,
                 ),
                 Gap.height(20.ds),
                 TextBase(
-                  label:
-                      'Check the demo feature showcase by clicking the button below.',
+                  label: 'introduction_message'.tr(),
                   textAlign: TextAlign.center,
                   style: ThemeFonts.bodySmLight,
                 ),
@@ -83,13 +84,38 @@ class _LandingIntroductionSectionState
                 Spacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
+                  spacing: 20.ds,
+                  children: [
+                    Pressablebase(
+                      child: TextBase(
+                        label: '🇬🇧',
+                        style: ThemeFonts.bodyLgRegular,
+                      ),
+                      onTap: () {
+                        context.setLocale(Locale('en'));
+                      },
+                    ),
+                    Pressablebase(
+                      child: TextBase(
+                        label: '🇫🇷',
+                        style: ThemeFonts.bodyLgRegular,
+                      ),
+                      onTap: () {
+                        context.setLocale(Locale('fr'));
+                      },
+                    ),
+                  ],
+                ),
+                Gap.height(20.ds),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     InkBase(
                       onTap: () {
                         _systemModeCubit.setMode(Brightness.light);
                       },
                       child: TextBase(
-                        label: 'Light Mode',
+                        label: 'light_mode'.tr(),
                         style: state.systemMode == ThemeSystemMode.light
                             ? ThemeFonts.bodyXsMedium
                             : ThemeFonts.bodyXsLight,
@@ -101,7 +127,7 @@ class _LandingIntroductionSectionState
                         _systemModeCubit.setMode(Brightness.dark);
                       },
                       child: TextBase(
-                        label: 'Dark Mode',
+                        label: 'dark_mode'.tr(),
                         style: state.systemMode == ThemeSystemMode.dark
                             ? ThemeFonts.bodyXsMedium
                             : ThemeFonts.bodyXsLight,
@@ -110,7 +136,7 @@ class _LandingIntroductionSectionState
                   ],
                 ),
                 Gap.height(20.ds),
-                TextBase(label: 'ver 1.8.0', style: ThemeFonts.bodyXsLight),
+                TextBase(label: 'ver 2.0.0', style: ThemeFonts.bodyXsLight),
                 Gap.height(ScreenSizeUtil.getBottomBarHeight().ds + 20.ds),
               ],
             ),

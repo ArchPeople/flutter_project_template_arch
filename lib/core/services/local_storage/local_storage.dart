@@ -1,24 +1,34 @@
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:hive_ce/hive.dart';
 
 class LocalStorage {
-  Future<void> setValue({required String key, required String value}) async {
-    final prefs = await SharedPreferences.getInstance();
+  static const String _boxName = 'app_storage';
 
-    await prefs.setString(key, value);
+  late final Box _box;
+
+  Future<void> openBox() async {
+    _box = await Hive.openBox(_boxName);
   }
 
-  Future<dynamic> getValue({required String key}) async {
-    final prefs = await SharedPreferences.getInstance();
-    return prefs.get(key);
+  Future<void> setValue({
+    required String key,
+    required dynamic value,
+  }) async {
+    await _box.put(key, value);
   }
 
-  Future<void> deleteValue({required String key}) async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.remove(key);
+  String? getValue({
+    required String key,
+  }) {
+    return _box.get(key);
+  }
+
+  Future<void> deleteValue({
+    required String key,
+  }) async {
+    await _box.delete(key);
   }
 
   Future<void> clearAllValue() async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.clear();
+    await _box.clear();
   }
 }

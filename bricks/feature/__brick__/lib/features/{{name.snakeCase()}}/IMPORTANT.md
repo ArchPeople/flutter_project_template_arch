@@ -1,6 +1,6 @@
 ## IMPORTANT
 
-### 1. Add to [injection.dart](/lib/core/dependencies/injection.dart) and import
+### 1. Add to [repository_module.dart](/lib/core/dependencies/modules/repository_module.dart) and import
 
 ```dart
 getIt.registerLazySingleton<{{name.pascalCase()}}Repository>(
