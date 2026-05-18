@@ -1,12 +1,17 @@
 import 'dart:io';
 
-Future<void> main() async {
+Future<void> main({bool android = true}) async {
+  await Process.run('flutter', [
+    'clean',
+    'build_runner',
+    'clean',
+  ], runInShell: true);
   try {
-    print('\nCleaning the project 🧹');
+    print('Cleaning the project 🧹');
 
-    final result = await Process.run(
-      'sh',
-      [
+    ProcessResult result;
+    if (android) {
+      result = await Process.run('sh', [
         '-c',
         'rm -rf ios/Pods && '
             'rm -rf ios/Podfile.lock && '
@@ -16,15 +21,26 @@ Future<void> main() async {
             'cd .. && '
             'cd ios && pod install --repo-update && '
             'cd ..',
-      ],
-      runInShell: true,
-    );
+      ], runInShell: true);
+    } else {
+      result = await Process.run('sh', [
+        '-c',
+        'rm -rf ios/Pods && '
+            'rm -rf ios/Podfile.lock && '
+            'flutter clean && '
+            'flutter pub get && '
+            'cd ios && pod install --repo-update && '
+            'cd ..',
+      ], runInShell: true);
+    }
 
     if (result.exitCode == 0) {
       print('\nProject is now clean ✨');
     } else {
-      print('\n❌ Cleaning failed');
+      print('\n❌ Cleaning failed on Android:');
       print(result.stderr);
+      print('\nRetrying without cleaning Android...');
+      await main(android: false);
     }
   } catch (e) {
     print('\n❌ Something went wrong when cleaning the project');
