@@ -4,6 +4,6 @@ part 'env.g.dart';
 
 @Envied(path: '.env', obfuscate: true)
 abstract class Env {
-  @EnviedField(varName: 'DEMO')
-  static final String demo = _Env.demo;
+  @EnviedField(varName: 'FLAVOR')
+  static final String flavor = _Env.flavor;
 }
