@@ -40,6 +40,7 @@ Future<void> main({bool android = true}) async {
       print('\n❌ Cleaning failed on Android:');
       print(result.stderr);
       print('\nRetrying without cleaning Android...');
+      print('Do not worry, you can still run Android!');
       await main(android: false);
     }
   } catch (e) {
