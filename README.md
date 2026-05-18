@@ -17,10 +17,10 @@
 In your new project folder:
 
 ```bash
-git clone https://github.com/michmadheo/flutter_project_template_arch.git
+git clone https://github.com/ArchPeople/flutter_project_template_arch.git
 ```
 
-Or download via [releases](https://github.com/michmadheo/flutter_project_template_arch/releases).
+Or download via [releases](https://github.com/ArchPeople/flutter_project_template_arch/releases).
 
 ## Requirements 🛠️
 
@@ -37,7 +37,7 @@ These are the requirements to run this template:
 > Do not use a Flutter version above the one stated, as breaking changes may occur until we adjust for them.
 
 > [!NOTE]
-> Requirements doesn't match your setup? find another template version in [releases](https://github.com/michmadheo/flutter_project_template_arch/releases).
+> Requirements doesn't match your setup? find another template version in [releases](https://github.com/ArchPeople/flutter_project_template_arch/releases).
 
 ## What's included 🚀
 
