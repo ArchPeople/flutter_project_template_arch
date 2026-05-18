@@ -18,5 +18,5 @@ class Config {
   static String localizationPath = 'assets/translations';
 
   // Environment (Add more if you add more keys in the env.dart file)
-  static String demo = Env.demo;
+  static String flavor = Env.flavor;
 }
