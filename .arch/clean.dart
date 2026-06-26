@@ -13,29 +13,19 @@ Future<void> main({bool android = true}) async {
     if (android) {
       result = await Process.run('sh', [
         '-c',
-        'rm -rf ios/Pods && '
-            'rm -rf ios/Podfile.lock && '
-            'flutter clean && '
-            'flutter pub get && '
+        'flutter pub get && '
             'cd android && ./gradlew clean && '
-            'cd .. && '
-            'cd ios && pod install --repo-update && '
             'cd ..',
       ], runInShell: true);
     } else {
       result = await Process.run('sh', [
         '-c',
-        'rm -rf ios/Pods && '
-            'rm -rf ios/Podfile.lock && '
-            'flutter clean && '
-            'flutter pub get && '
-            'cd ios && pod install --repo-update && '
-            'cd ..',
+        'flutter pub get',
       ], runInShell: true);
     }
 
     if (result.exitCode == 0) {
-      print('\nProject is now clean ✨');
+      print('Project is now clean ✨');
     } else {
       print('\n❌ Cleaning failed on Android:');
       print(result.stderr);
