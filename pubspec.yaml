@@ -6,7 +6,7 @@ version: 1.0.0+1
 
 # Supported Flutter: 3.41.9
 environment:
-  sdk: "3.11.5"
+  sdk: ">=3.12.0 <=3.12.2"
 
 dependencies:
   flutter:
@@ -25,6 +25,7 @@ dependencies:
   easy_localization: 3.0.8
   hive_ce: 2.19.3
   hive_ce_flutter: 2.3.4
+  shared_preferences: 2.5.5
 
 dev_dependencies:
   hive_ce_generator: 1.11.1
