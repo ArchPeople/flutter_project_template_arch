@@ -28,7 +28,7 @@ These are the requirements to run this template:
 
 - Java minimum version 17
 - Flutter version 3.44.2
-- dart version 3.11.5 (Should already be bundled with flutter)
+- dart version 3.12.2 (Should already be bundled with flutter)
 - Android Studio minimum version Meerkat 2024.3.1
 - Xcode up minimum version 16.4
 - (Optional but recommended) mason_cli version 0.1.3
