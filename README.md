@@ -27,7 +27,7 @@ Or download via [releases](https://github.com/ArchPeople/flutter_project_templat
 These are the requirements to run this template:
 
 - Java minimum version 17
-- Flutter version 3.44.2
+- Flutter version 3.44.4 - 3.44.6
 - dart version 3.12.2 (Should already be bundled with flutter)
 - Android Studio minimum version Meerkat 2024.3.1
 - Xcode up minimum version 16.4
