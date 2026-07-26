@@ -4,7 +4,7 @@ publish_to: "none"
 
 version: 1.0.0+1
 
-# Supported Flutter: 3.44.4 - 3.44.6
+# Supported Flutter: 3.44.6 - 3.44.8
 environment:
   sdk: "3.12.2"
 
@@ -18,7 +18,7 @@ dependencies:
   envied: 1.3.8
   bloc: 9.2.1
   equatable: 2.1.0
-  dio: 5.10.0
+  dio: 5.11.0
   fpdart: 1.2.0
   get_it: 9.2.1
   easy_localization: 3.0.8
