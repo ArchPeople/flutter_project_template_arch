@@ -136,7 +136,7 @@ class _LandingIntroductionSectionState
                   ],
                 ),
                 Gap.height(20.ds),
-                TextBase(label: 'ver 2.1.2', style: ThemeFonts.bodyXsLight),
+                TextBase(label: 'ver 2.2.0', style: ThemeFonts.bodyXsLight),
                 Gap.height(ScreenSizeUtil.getBottomBarHeight().ds + 20.ds),
               ],
             ),
