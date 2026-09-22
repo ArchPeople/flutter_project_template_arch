@@ -3,4 +3,5 @@ class NavigationPath {
 
   static String landing = '/landing';
   static String demoFeature = '/demo-feature';
+  // @mason-anchor <-- Do not remove
 }

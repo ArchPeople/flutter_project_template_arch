@@ -6,6 +6,7 @@ import 'package:flutter_project_template_arch/app/navigation/object/demo_navigat
 import 'package:flutter_project_template_arch/app/navigation/observer/navigation_observer.dart';
 import 'package:flutter_project_template_arch/app/navigation/path/navigation_path.dart';
 import 'package:flutter_project_template_arch/features/landing/view/landing_view.dart';
+// @mason-import-anchor <-- Do not remove
 import 'package:go_router/go_router.dart';
 
 final router = GoRouter(
@@ -26,11 +27,11 @@ final router = GoRouter(
             ? state.extra as DemoNavigationObject
             : null; // This is an example if you want to pass extra data to the page
         return DemoFeatureView(
-          extra:
-              extra, // Pass the extra data to the view, don't forget to add this in the view constructor
+          extra: extra, // Pass the extra data to the view, don't forget to add this in the view constructor
         );
       },
     ),
+    // @mason-anchor <-- Do not remove
 
     /// Example of using animation when navigating to the DemoFeatureView, please note that using animation will disable device's back functionality
     // GoRoute(
