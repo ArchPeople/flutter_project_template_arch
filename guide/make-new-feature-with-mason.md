@@ -33,7 +33,7 @@ You can see the example in the [features](lib/features/) folder
 
 With Mason, you can generate the structure and all the files in an instant, you don't have to do a copy-paste-rename of your previous feature. We've already prepared the brick (template) for it.
 
-Install mason on your machine
+Install mason on your machine (please use zsh on a mac):
 
 ```bash
 dart pub global activate mason_cli
@@ -56,9 +56,12 @@ mason get feature
 To use Mason, type this:
 
 ```bash
-mason make feature
+dart run .arch/mason_feature.dart
 ```
 
 A prompt will appear and ask for the feature name. Enter the feature name, for example order detail (mason will automatically change it into order_detail, so no worries)
 
 Mason will then generate all the files, you just have to go to the generated IMPORTANT.md file and copy-paste the code to its specific files.
+
+> [!IMPORTANT]
+> Do not remove or delete any // @mason-anchor <-- Do not remove' or // @mason-import-anchor <-- Do not remove' in router.dart, navigation_path.dart and repository_module.dart. It's used for automatic imports. Removing, deleting or changing will cause unexpected errors
