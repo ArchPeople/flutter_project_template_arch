@@ -51,6 +51,11 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
+
+    buildFeatures {
+        resValues = true
+        buildConfig = true
+    }
 }
 
 kotlin {
