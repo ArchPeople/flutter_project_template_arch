@@ -14,13 +14,9 @@
 
 ## Quick Start 🎮
 
-In your new project folder:
+Download the latest version [v2.4.1](https://github.com/ArchPeople/flutter_project_template_arch/archive/refs/tags/v2.4.1.zip)
 
-```bash
-git clone https://github.com/ArchPeople/flutter_project_template_arch.git
-```
-
-Or download via [releases](https://github.com/ArchPeople/flutter_project_template_arch/releases).
+Or check other versions in [releases](https://github.com/ArchPeople/flutter_project_template_arch/releases).
 
 ## Requirements 🛠️
 
