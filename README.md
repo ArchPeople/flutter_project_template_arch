@@ -14,20 +14,16 @@
 
 ## Quick Start 🎮
 
-In your new project folder:
+Download the latest version [v2.4.1](https://github.com/ArchPeople/flutter_project_template_arch/archive/refs/tags/v2.4.1.zip)
 
-```bash
-git clone https://github.com/ArchPeople/flutter_project_template_arch.git
-```
-
-Or download via [releases](https://github.com/ArchPeople/flutter_project_template_arch/releases).
+Or check other versions in [releases](https://github.com/ArchPeople/flutter_project_template_arch/releases).
 
 ## Requirements 🛠️
 
 These are the requirements to run this template:
 
 - Java minimum version 17
-- Flutter version 3.47.6
+- Flutter version 3.47.6 -  3.47.7
 - dart version 3.13.5 (Should already be bundled with flutter)
 - Android Studio minimum version Meerkat 2024.3.1
 - Xcode up minimum version 16.4
