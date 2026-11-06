@@ -4,9 +4,9 @@ publish_to: "none"
 
 version: 1.0.0+1
 
-# Supported Flutter: 3.47.6 -  3.47.7
+# Supported Flutter: 3.47.8 -  3.47.9
 environment:
-  sdk: "3.13.5"
+  sdk: "3.13.7"
 
 dependencies:
   flutter:
@@ -14,7 +14,7 @@ dependencies:
 
   cupertino_icons: 2.0.0
   flutter_bloc: 9.1.1
-  go_router: 18.1.1
+  go_router: 18.1.3
   envied: 1.3.10
   bloc: 9.2.1
   equatable: 3.0.0
