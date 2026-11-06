@@ -14,7 +14,7 @@
 
 ## Quick Start 🎮
 
-Download the latest version [v2.4.1](https://github.com/ArchPeople/flutter_project_template_arch/archive/refs/tags/v2.4.1.zip)
+Download the latest version [v2.4.2](https://github.com/ArchPeople/flutter_project_template_arch/archive/refs/tags/v2.4.2.zip)
 
 Or check other versions in [releases](https://github.com/ArchPeople/flutter_project_template_arch/releases).
 
