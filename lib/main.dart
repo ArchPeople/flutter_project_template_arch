@@ -1,9 +1,12 @@
-import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/material.dart';
+import 'package:cupertino_ui/cupertino_ui.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_localizations/flutter_localizations.dart'
+    show GlobalWidgetsLocalizations;
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_project_template_arch/app/global/locale/locale_cubit.dart';
 import 'package:flutter_project_template_arch/app/global/system_mode/system_mode_cubit.dart';
-import 'package:flutter_project_template_arch/core/config/config.dart';
+import 'package:flutter_project_template_arch/app/localizations/app_localizations.dart';
 import 'package:flutter_project_template_arch/core/dependencies/injection.dart';
 import 'package:flutter_project_template_arch/core/services/api_fetch/api_fetch.dart';
 import 'package:flutter_project_template_arch/core/general_helpers/utils/screen_size_util.dart';
@@ -20,22 +23,13 @@ void main() async {
 
   /// Initialize Dependency Injection
   Injection().initializeDependencyInjection();
-  await EasyLocalization.ensureInitialized();
   await Hive.initFlutter();
 
   /// Initialize Dio
   getIt<ApiFetch>().initializeDio();
   getIt<LocalStorage>().openBox();
 
-  runApp(
-    EasyLocalization(
-      supportedLocales: Config.supportedLocales,
-      path: Config.localizationPath,
-      fallbackLocale: Config.fallbackLocale,
-      saveLocale: false,
-      child: const MyApp(),
-    ),
-  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -47,18 +41,31 @@ class MyApp extends StatelessWidget {
     ScreenSizeUtil.initializeScreenSize(context);
 
     return MultiBlocProvider(
-      providers: [BlocProvider(create: (context) => SystemModeCubit())],
+      providers: [
+        BlocProvider(create: (context) => SystemModeCubit()),
+        BlocProvider(create: (context) => LocaleCubit()),
+      ],
       child: BlocSelector<SystemModeCubit, SystemModeState, ThemeMode>(
         selector: (state) => state.systemMode,
         builder: (context, state) {
-          return MaterialApp.router(
-            localizationsDelegates: context.localizationDelegates,
-            supportedLocales: context.supportedLocales,
-            locale: context.locale,
-            themeMode: state,
-            theme: ThemeSystemMode.lightConfig,
-            darkTheme: ThemeSystemMode.darkConfig,
-            routerConfig: router,
+          return BlocSelector<LocaleCubit, LocaleState, Locale?>(
+            selector: (state) => state.locale,
+            builder: (context, locale) {
+              return MaterialApp.router(
+                localizationsDelegates: [
+                  AppLocalizations.delegate,
+                  GlobalMaterialLocalizations.delegate,
+                  GlobalCupertinoLocalizations.delegate,
+                  GlobalWidgetsLocalizations.delegate,
+                ],
+                supportedLocales: AppLocalizations.supportedLocales,
+                locale: locale,
+                themeMode: state,
+                theme: ThemeSystemMode.lightConfig,
+                darkTheme: ThemeSystemMode.darkConfig,
+                routerConfig: router,
+              );
+            },
           );
         },
       ),

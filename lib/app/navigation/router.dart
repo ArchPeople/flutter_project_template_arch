@@ -1,4 +1,4 @@
-// import 'package:flutter/material.dart'; // Uncomment this if you want to use StatefullShellRouter
+// import 'package:material_ui/material_ui.dart'; // Uncomment this if you want to use StatefullShellRouter
 import 'package:flutter_project_template_arch/core/config/config.dart';
 import 'package:flutter_project_template_arch/features/demo_feature/view/demo_feature_view.dart';
 // import 'package:flutter_project_template_arch/navigation/animation/navigation_animation.dart'; // Uncomment this if you want to use custom animations when navigating to the DemoFeatureView

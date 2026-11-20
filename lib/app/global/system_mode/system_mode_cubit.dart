@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_project_template_arch/app/themes/system_mode/theme_system_mode.dart';
 
 part 'system_mode_state.dart';

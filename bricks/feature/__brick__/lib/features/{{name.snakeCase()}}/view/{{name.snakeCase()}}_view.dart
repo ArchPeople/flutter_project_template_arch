@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_project_template_arch/app/widgets/atoms/text/text_base.dart';
 import 'package:flutter_project_template_arch/core/dependencies/injection.dart';

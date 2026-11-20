@@ -51,3 +51,6 @@ lib/core/config/env/env.g.dart
 # Mason
 .mason
 mason-lock.json
+# Generated localizations (keep only .arb)
+lib/app/localizations/*
+!lib/app/localizations/*.arb
