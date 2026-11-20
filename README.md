@@ -14,7 +14,7 @@
 
 ## Quick Start 🎮
 
-Download the latest version [v2.4.2](https://github.com/ArchPeople/flutter_project_template_arch/archive/refs/tags/v2.4.2.zip)
+Download the latest version [v2.5.0](https://github.com/ArchPeople/flutter_project_template_arch/archive/refs/tags/v2.4.2.zip)
 
 Or check other versions in [releases](https://github.com/ArchPeople/flutter_project_template_arch/releases).
 
@@ -23,8 +23,8 @@ Or check other versions in [releases](https://github.com/ArchPeople/flutter_proj
 These are the requirements to run this template:
 
 - Java minimum version 17
-- Flutter version 3.47.8 -  3.47.9
-- dart version 3.13.7 (Should already be bundled with flutter)
+- Flutter version 3.50.0 -  3.50.1
+- dart version 3.14.0 (Should already be bundled with flutter)
 - Android Studio minimum version Meerkat 2024.3.1
 - Xcode up minimum version 16.4
 - (Optional but recommended) mason_cli version 0.1.3
