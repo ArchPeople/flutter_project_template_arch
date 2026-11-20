@@ -1,8 +1,9 @@
-import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_project_template_arch/app/localizations/app_localizations.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_project_template_arch/app/assets/colors/asset_colors.dart';
 import 'package:flutter_project_template_arch/app/assets/images/asset_images.dart';
+import 'package:flutter_project_template_arch/app/global/locale/locale_cubit.dart';
 import 'package:flutter_project_template_arch/app/global/system_mode/system_mode_cubit.dart';
 import 'package:flutter_project_template_arch/app/navigation/path/navigation_path.dart';
 import 'package:flutter_project_template_arch/app/navigation/router.dart';
@@ -15,6 +16,7 @@ import 'package:flutter_project_template_arch/app/widgets/atoms/ink/ink_base.dar
 import 'package:flutter_project_template_arch/app/widgets/atoms/pressable/pressable_base.dart';
 import 'package:flutter_project_template_arch/app/widgets/atoms/text/text_base.dart';
 import 'package:flutter_project_template_arch/core/general_helpers/extensions/dynamic_size_extension.dart';
+import 'package:flutter_project_template_arch/core/general_helpers/extensions/localization_extension.dart';
 import 'package:flutter_project_template_arch/core/general_helpers/utils/screen_size_util.dart';
 
 class LandingIntroductionSection extends StatefulWidget {
@@ -28,11 +30,14 @@ class LandingIntroductionSection extends StatefulWidget {
 class _LandingIntroductionSectionState
     extends State<LandingIntroductionSection> {
   late final _systemModeCubit = context.read<SystemModeCubit>();
+  late final _localeCubit = context.read<LocaleCubit>();
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<SystemModeCubit, SystemModeState>(
       builder: (context, state) {
+        AppLocalizations tr = context.l10n;
+
         return AnimatedContainer(
           duration: const Duration(milliseconds: 300),
           width: double.infinity,
@@ -64,12 +69,12 @@ class _LandingIntroductionSectionState
                 ),
                 Gap.height(80.ds),
                 TextBase(
-                  label: 'welcome_message'.tr(args: ['Arch']),
+                  label: context.l10n.welcomeMessage('Arch'),
                   style: ThemeFonts.h4ExtraBold,
                 ),
                 Gap.height(20.ds),
                 TextBase(
-                  label: 'introduction_message'.tr(),
+                  label: tr.introductionMessage,
                   textAlign: TextAlign.center,
                   style: ThemeFonts.bodySmLight,
                 ),
@@ -92,7 +97,7 @@ class _LandingIntroductionSectionState
                         style: ThemeFonts.bodyLgRegular,
                       ),
                       onTap: () {
-                        context.setLocale(Locale('en'));
+                        _localeCubit.setLocale(const Locale('en'));
                       },
                     ),
                     Pressablebase(
@@ -101,7 +106,7 @@ class _LandingIntroductionSectionState
                         style: ThemeFonts.bodyLgRegular,
                       ),
                       onTap: () {
-                        context.setLocale(Locale('fr'));
+                        _localeCubit.setLocale(const Locale('fr'));
                       },
                     ),
                   ],
@@ -115,7 +120,7 @@ class _LandingIntroductionSectionState
                         _systemModeCubit.setMode(Brightness.light);
                       },
                       child: TextBase(
-                        label: 'light_mode'.tr(),
+                        label: tr.lightMode,
                         style: state.systemMode == ThemeSystemMode.light
                             ? ThemeFonts.bodyXsMedium
                             : ThemeFonts.bodyXsLight,
@@ -127,7 +132,7 @@ class _LandingIntroductionSectionState
                         _systemModeCubit.setMode(Brightness.dark);
                       },
                       child: TextBase(
-                        label: 'dark_mode'.tr(),
+                        label: tr.darkMode,
                         style: state.systemMode == ThemeSystemMode.dark
                             ? ThemeFonts.bodyXsMedium
                             : ThemeFonts.bodyXsLight,
@@ -136,7 +141,7 @@ class _LandingIntroductionSectionState
                   ],
                 ),
                 Gap.height(20.ds),
-                TextBase(label: 'ver 2.4.2', style: ThemeFonts.bodyXsLight),
+                TextBase(label: 'ver 2.5.0', style: ThemeFonts.bodyXsLight),
                 Gap.height(ScreenSizeUtil.getBottomBarHeight().ds + 20.ds),
               ],
             ),

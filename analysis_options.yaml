@@ -3,6 +3,7 @@ include: package:flutter_lints/flutter.yaml
 analyzer:
   exclude:
     - "bricks/**"
+    - lib/app/localizations/app_localizations*.dart
     - build/**
     - android/**
     - ios/**

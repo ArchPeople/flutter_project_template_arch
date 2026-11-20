@@ -1,63 +1,28 @@
-import 'package:equatable/equatable.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-class DemoDataResponse extends Equatable {
-  final String title;
-  final String description;
-  final List<DemoDataResponseMovies> movies;
+part 'demo_data_response.freezed.dart';
+part 'demo_data_response.g.dart';
 
-  const DemoDataResponse({
-    required this.title,
-    required this.description,
-    required this.movies,
-  });
+@freezed
+abstract class DemoDataResponse with _$DemoDataResponse {
+  const factory DemoDataResponse({
+    required String title,
+    required String description,
+    required List<DemoDataResponseMovies> movies,
+  }) = _DemoDataResponse;
 
-  factory DemoDataResponse.fromJson(Map<String, dynamic> json) {
-    return DemoDataResponse(
-      title: json['title'] as String,
-      description: json['description'] as String,
-      movies: (json['movies'] as List<dynamic>)
-          .map(
-            (e) => DemoDataResponseMovies.fromJson(e as Map<String, dynamic>),
-          )
-          .toList(),
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'title': title,
-      'description': description,
-      'movies': movies.map((e) => e.toJson()).toList(),
-    };
-  }
-
-  @override
-  List<Object?> get props => [title, description, movies];
+  factory DemoDataResponse.fromJson(Map<String, dynamic> json) =>
+      _$DemoDataResponseFromJson(json);
 }
 
-class DemoDataResponseMovies extends Equatable {
-  final String id;
-  final String title;
-  final String releaseYear;
+@freezed
+abstract class DemoDataResponseMovies with _$DemoDataResponseMovies {
+  const factory DemoDataResponseMovies({
+    required String id,
+    required String title,
+    required String releaseYear,
+  }) = _DemoDataResponseMovies;
 
-  const DemoDataResponseMovies({
-    required this.id,
-    required this.title,
-    required this.releaseYear,
-  });
-
-  factory DemoDataResponseMovies.fromJson(Map<String, dynamic> json) {
-    return DemoDataResponseMovies(
-      id: json['id'],
-      title: json['title'],
-      releaseYear: json['releaseYear'],
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {'id': id, 'title': title, 'releaseYear': releaseYear};
-  }
-
-  @override
-  List<Object?> get props => [id, title, releaseYear];
+  factory DemoDataResponseMovies.fromJson(Map<String, dynamic> json) =>
+      _$DemoDataResponseMoviesFromJson(json);
 }

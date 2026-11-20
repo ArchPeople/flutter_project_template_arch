@@ -1,0 +1,16 @@
+{
+  "@@locale": "en",
+  "welcomeMessage": "Welcome to {appName}",
+  "@welcomeMessage": {
+    "description": "Greeting shown on the landing page",
+    "placeholders": {
+      "appName": {
+        "type": "String",
+        "example": "Arch"
+      }
+    }
+  },
+  "introductionMessage": "Check the demo feature showcase by clicking the button below.",
+  "lightMode": "Light Mode",
+  "darkMode": "Dark Mode"
+}

@@ -1,14 +1,12 @@
-import 'package:equatable/equatable.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-class DemoDataRequest extends Equatable {
-  final String id;
+part 'demo_data_request.freezed.dart';
+part 'demo_data_request.g.dart';
 
-  const DemoDataRequest({required this.id});
+@freezed
+abstract class DemoDataRequest with _$DemoDataRequest {
+  const factory DemoDataRequest({required String id}) = _DemoDataRequest;
 
-  Map<String, dynamic> toJson() {
-    return {"id": id};
-  }
-
-  @override
-  List<Object> get props => [id];
+  factory DemoDataRequest.fromJson(Map<String, dynamic> json) =>
+      _$DemoDataRequestFromJson(json);
 }

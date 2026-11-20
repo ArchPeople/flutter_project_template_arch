@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_project_template_arch/core/general_helpers/extensions/dynamic_size_extension.dart';
 
 class ThemePadding {

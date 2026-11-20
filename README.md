@@ -14,7 +14,7 @@
 
 ## Quick Start 🎮
 
-Download the latest version [v2.4.2](https://github.com/ArchPeople/flutter_project_template_arch/archive/refs/tags/v2.4.2.zip)
+Download the latest version [v2.5.0](https://github.com/ArchPeople/flutter_project_template_arch/archive/refs/tags/v2.4.2.zip)
 
 Or check other versions in [releases](https://github.com/ArchPeople/flutter_project_template_arch/releases).
 
@@ -23,8 +23,8 @@ Or check other versions in [releases](https://github.com/ArchPeople/flutter_proj
 These are the requirements to run this template:
 
 - Java minimum version 17
-- Flutter version 3.47.8 -  3.47.9
-- dart version 3.13.7 (Should already be bundled with flutter)
+- Flutter version 3.50.0 -  3.50.1
+- dart version 3.14.0 (Should already be bundled with flutter)
 - Android Studio minimum version Meerkat 2024.3.1
 - Xcode up minimum version 16.4
 - (Optional but recommended) mason_cli version 0.1.3
@@ -42,12 +42,13 @@ Essentials to ease your project setup. Here you can find:
 - ✅ Compiled with the latest [Flutter](https://docs.flutter.dev/install/archive) version (See requirements)
 - ✅ Tasty ready-to-use flavors, configured for development, staging & production environment (See [how to run](guide/how-to-run.md) guide)
 - ✅ Consistent template for new feature with [mason_cli](https://pub.dev/packages/mason_cli) generator (See requirements)
-- ✅ Hello! Bonjour! localization support with [easy_localization](https://pub.dev/packages/easy_localization)
+- ✅ Hello! Bonjour! localization support with official [Flutter internationalization](https://docs.flutter.dev/ui/internationalization) (See [how to add locale](guide/how-to-add-locale.md) guide).
 - ✅ Swift Navigation & routing with [go_router](https://pub.dev/packages/go_router)
 - ✅ Safe environment configuration with [envied](https://pub.dev/packages/envied)
 - ✅ Robust API Fetching with [dio](https://pub.dev/packages/dio)
 - ✅ Easy to use [bloc](https://pub.dev/packages/flutter_bloc) design pattern (see [demo_feature](lib/features/demo_feature) for example)
 - ✅ "Functional" functional programming with [fpdart](https://pub.dev/packages/fpdart)
+- ✅ Cold data class generator with [freezed](https://pub.dev/packages/freezed)
 - ✅ Super fast key-value storage with [hive_ce](https://pub.dev/packages/hive_ce)
 - ✅ Comparable object models with [equatable](https://pub.dev/packages/equatable)
 - ✅ Manageable dependency injection with [get_it](https://pub.dev/packages/get_it)
