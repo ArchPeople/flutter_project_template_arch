@@ -148,7 +148,7 @@ class _LandingIntroductionSectionState
                 ),
                 Gap.height(context.ds(20)),
                 TextBase(
-                  label: 'ver 2.5.0',
+                  label: 'ver 2.6.0',
                   style: context.isTablet
                       ? fonts.captionLight
                       : fonts.bodyXsLight,
