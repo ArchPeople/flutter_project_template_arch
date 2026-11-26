@@ -28,7 +28,7 @@ class _DemoFeatureScreenState extends State<DemoFeatureScreen> {
           centerTitle: false,
         ),
         body: Padding(
-          padding: ThemePadding.ph16,
+          padding: context.themePadding.ph16,
           child: SizedBox(
             width: double.infinity,
             child: Column(

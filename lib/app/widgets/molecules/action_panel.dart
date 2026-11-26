@@ -25,7 +25,7 @@ class ActionPanel extends StatelessWidget {
           TextBase(label: title),
           Spacer(),
           SizedBox(
-            width: 100.ds,
+            width: context.ds(100),
             child: ButtonBase(
               label: buttonLabel,
               onPressed: onPressed,

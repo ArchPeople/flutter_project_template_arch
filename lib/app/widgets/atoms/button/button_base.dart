@@ -79,7 +79,7 @@ class ButtonBase extends StatelessWidget {
           label: 'button-$accessibilityLabel',
           child: SizedBox(
             width: width ?? double.infinity,
-            height: height ?? 40.ds,
+            height: height ?? context.ds(40),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: getBackgroundColor(state.systemMode),

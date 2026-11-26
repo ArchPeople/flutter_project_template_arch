@@ -2,186 +2,192 @@ import 'package:material_ui/material_ui.dart';
 import 'package:flutter_project_template_arch/core/general_helpers/extensions/dynamic_size_extension.dart';
 
 class ThemeBorder {
-  const ThemeBorder._();
+  const ThemeBorder(this._scale);
+
+  final double _scale;
 
   // border Circular
-  static BorderRadius bc0 = BorderRadius.circular(0.ds);
-  static BorderRadius bc2 = BorderRadius.circular(2.ds);
-  static BorderRadius bc4 = BorderRadius.circular(4.ds);
-  static BorderRadius bc8 = BorderRadius.circular(8.ds);
-  static BorderRadius bc12 = BorderRadius.circular(12.ds);
-  static BorderRadius bc16 = BorderRadius.circular(16.ds);
-  static BorderRadius bc24 = BorderRadius.circular(24.ds);
-  static BorderRadius bc32 = BorderRadius.circular(32.ds);
+  BorderRadius get bc0 => BorderRadius.circular(0 * _scale);
+  BorderRadius get bc2 => BorderRadius.circular(2 * _scale);
+  BorderRadius get bc4 => BorderRadius.circular(4 * _scale);
+  BorderRadius get bc8 => BorderRadius.circular(8 * _scale);
+  BorderRadius get bc12 => BorderRadius.circular(12 * _scale);
+  BorderRadius get bc16 => BorderRadius.circular(16 * _scale);
+  BorderRadius get bc24 => BorderRadius.circular(24 * _scale);
+  BorderRadius get bc32 => BorderRadius.circular(32 * _scale);
 
   // border top right
-  static BorderRadius btr4 =
-      BorderRadius.only(topRight: Radius.circular(4.ds));
-  static BorderRadius btr8 =
-      BorderRadius.only(topRight: Radius.circular(8.ds));
-  static BorderRadius btr12 =
-      BorderRadius.only(topRight: Radius.circular(12.ds));
-  static BorderRadius btr16 =
-      BorderRadius.only(topRight: Radius.circular(16.ds));
-  static BorderRadius btr24 =
-      BorderRadius.only(topRight: Radius.circular(24.ds));
-  static BorderRadius btr32 =
-      BorderRadius.only(topRight: Radius.circular(32.ds));
+  BorderRadius get btr4 =>
+      BorderRadius.only(topRight: Radius.circular(4 * _scale));
+  BorderRadius get btr8 =>
+      BorderRadius.only(topRight: Radius.circular(8 * _scale));
+  BorderRadius get btr12 =>
+      BorderRadius.only(topRight: Radius.circular(12 * _scale));
+  BorderRadius get btr16 =>
+      BorderRadius.only(topRight: Radius.circular(16 * _scale));
+  BorderRadius get btr24 =>
+      BorderRadius.only(topRight: Radius.circular(24 * _scale));
+  BorderRadius get btr32 =>
+      BorderRadius.only(topRight: Radius.circular(32 * _scale));
 
   // border top left
-  static BorderRadius btl4 =
-      BorderRadius.only(topLeft: Radius.circular(4.ds));
-  static BorderRadius btl8 =
-      BorderRadius.only(topLeft: Radius.circular(8.ds));
-  static BorderRadius btl12 =
-      BorderRadius.only(topLeft: Radius.circular(12.ds));
-  static BorderRadius btl16 =
-      BorderRadius.only(topLeft: Radius.circular(16.ds));
-  static BorderRadius btl24 =
-      BorderRadius.only(topLeft: Radius.circular(24.ds));
-  static BorderRadius btl32 =
-      BorderRadius.only(topLeft: Radius.circular(32.ds));
+  BorderRadius get btl4 =>
+      BorderRadius.only(topLeft: Radius.circular(4 * _scale));
+  BorderRadius get btl8 =>
+      BorderRadius.only(topLeft: Radius.circular(8 * _scale));
+  BorderRadius get btl12 =>
+      BorderRadius.only(topLeft: Radius.circular(12 * _scale));
+  BorderRadius get btl16 =>
+      BorderRadius.only(topLeft: Radius.circular(16 * _scale));
+  BorderRadius get btl24 =>
+      BorderRadius.only(topLeft: Radius.circular(24 * _scale));
+  BorderRadius get btl32 =>
+      BorderRadius.only(topLeft: Radius.circular(32 * _scale));
 
   // border bottom right
-  static BorderRadius bbr4 =
-      BorderRadius.only(bottomRight: Radius.circular(4.ds));
-  static BorderRadius bbr8 =
-      BorderRadius.only(bottomRight: Radius.circular(8.ds));
-  static BorderRadius bbr12 =
-      BorderRadius.only(bottomRight: Radius.circular(12.ds));
-  static BorderRadius bbr16 =
-      BorderRadius.only(bottomRight: Radius.circular(16.ds));
-  static BorderRadius bbr24 =
-      BorderRadius.only(bottomRight: Radius.circular(24.ds));
-  static BorderRadius bbr32 =
-      BorderRadius.only(bottomRight: Radius.circular(32.ds));
+  BorderRadius get bbr4 =>
+      BorderRadius.only(bottomRight: Radius.circular(4 * _scale));
+  BorderRadius get bbr8 =>
+      BorderRadius.only(bottomRight: Radius.circular(8 * _scale));
+  BorderRadius get bbr12 =>
+      BorderRadius.only(bottomRight: Radius.circular(12 * _scale));
+  BorderRadius get bbr16 =>
+      BorderRadius.only(bottomRight: Radius.circular(16 * _scale));
+  BorderRadius get bbr24 =>
+      BorderRadius.only(bottomRight: Radius.circular(24 * _scale));
+  BorderRadius get bbr32 =>
+      BorderRadius.only(bottomRight: Radius.circular(32 * _scale));
 
   // border bottom left
-  static BorderRadius bbl4 =
-      BorderRadius.only(bottomLeft: Radius.circular(4.ds));
-  static BorderRadius bbl8 =
-      BorderRadius.only(bottomLeft: Radius.circular(8.ds));
-  static BorderRadius bbl12 =
-      BorderRadius.only(bottomLeft: Radius.circular(12.ds));
-  static BorderRadius bbl16 =
-      BorderRadius.only(bottomLeft: Radius.circular(16.ds));
-  static BorderRadius bbl24 =
-      BorderRadius.only(bottomLeft: Radius.circular(24.ds));
-  static BorderRadius bbl32 =
-      BorderRadius.only(bottomLeft: Radius.circular(32.ds));
+  BorderRadius get bbl4 =>
+      BorderRadius.only(bottomLeft: Radius.circular(4 * _scale));
+  BorderRadius get bbl8 =>
+      BorderRadius.only(bottomLeft: Radius.circular(8 * _scale));
+  BorderRadius get bbl12 =>
+      BorderRadius.only(bottomLeft: Radius.circular(12 * _scale));
+  BorderRadius get bbl16 =>
+      BorderRadius.only(bottomLeft: Radius.circular(16 * _scale));
+  BorderRadius get bbl24 =>
+      BorderRadius.only(bottomLeft: Radius.circular(24 * _scale));
+  BorderRadius get bbl32 =>
+      BorderRadius.only(bottomLeft: Radius.circular(32 * _scale));
 
   // border top
-  static BorderRadius bt4 = BorderRadius.only(
-    topRight: Radius.circular(4.ds),
-    topLeft: Radius.circular(4.ds),
+  BorderRadius get bt4 => BorderRadius.only(
+    topRight: Radius.circular(4 * _scale),
+    topLeft: Radius.circular(4 * _scale),
   );
-  static BorderRadius bt8 = BorderRadius.only(
-    topRight: Radius.circular(8.ds),
-    topLeft: Radius.circular(8.ds),
+  BorderRadius get bt8 => BorderRadius.only(
+    topRight: Radius.circular(8 * _scale),
+    topLeft: Radius.circular(8 * _scale),
   );
-  static BorderRadius bt12 = BorderRadius.only(
-    topRight: Radius.circular(12.ds),
-    topLeft: Radius.circular(12.ds),
+  BorderRadius get bt12 => BorderRadius.only(
+    topRight: Radius.circular(12 * _scale),
+    topLeft: Radius.circular(12 * _scale),
   );
-  static BorderRadius bt16 = BorderRadius.only(
-    topRight: Radius.circular(16.ds),
-    topLeft: Radius.circular(16.ds),
+  BorderRadius get bt16 => BorderRadius.only(
+    topRight: Radius.circular(16 * _scale),
+    topLeft: Radius.circular(16 * _scale),
   );
-  static BorderRadius bt24 = BorderRadius.only(
-    topRight: Radius.circular(24.ds),
-    topLeft: Radius.circular(24.ds),
+  BorderRadius get bt24 => BorderRadius.only(
+    topRight: Radius.circular(24 * _scale),
+    topLeft: Radius.circular(24 * _scale),
   );
-  static BorderRadius bt32 = BorderRadius.only(
-    topRight: Radius.circular(32.ds),
-    topLeft: Radius.circular(32.ds),
+  BorderRadius get bt32 => BorderRadius.only(
+    topRight: Radius.circular(32 * _scale),
+    topLeft: Radius.circular(32 * _scale),
   );
 
   // border bottom
-  static BorderRadius bb4 = BorderRadius.only(
-    bottomRight: Radius.circular(4.ds),
-    bottomLeft: Radius.circular(4.ds),
+  BorderRadius get bb4 => BorderRadius.only(
+    bottomRight: Radius.circular(4 * _scale),
+    bottomLeft: Radius.circular(4 * _scale),
   );
-  static BorderRadius bb8 = BorderRadius.only(
-    bottomRight: Radius.circular(8.ds),
-    bottomLeft: Radius.circular(8.ds),
+  BorderRadius get bb8 => BorderRadius.only(
+    bottomRight: Radius.circular(8 * _scale),
+    bottomLeft: Radius.circular(8 * _scale),
   );
-  static BorderRadius bb12 = BorderRadius.only(
-    bottomRight: Radius.circular(12.ds),
-    bottomLeft: Radius.circular(12.ds),
+  BorderRadius get bb12 => BorderRadius.only(
+    bottomRight: Radius.circular(12 * _scale),
+    bottomLeft: Radius.circular(12 * _scale),
   );
-  static BorderRadius bb16 = BorderRadius.only(
-    bottomRight: Radius.circular(16.ds),
-    bottomLeft: Radius.circular(16.ds),
+  BorderRadius get bb16 => BorderRadius.only(
+    bottomRight: Radius.circular(16 * _scale),
+    bottomLeft: Radius.circular(16 * _scale),
   );
-  static BorderRadius bb24 = BorderRadius.only(
-    bottomRight: Radius.circular(24.ds),
-    bottomLeft: Radius.circular(24.ds),
+  BorderRadius get bb24 => BorderRadius.only(
+    bottomRight: Radius.circular(24 * _scale),
+    bottomLeft: Radius.circular(24 * _scale),
   );
-  static BorderRadius bb32 = BorderRadius.only(
-    bottomRight: Radius.circular(32.ds),
-    bottomLeft: Radius.circular(32.ds),
+  BorderRadius get bb32 => BorderRadius.only(
+    bottomRight: Radius.circular(32 * _scale),
+    bottomLeft: Radius.circular(32 * _scale),
   );
 
   // border right
-  static BorderRadius br4 = BorderRadius.only(
-    topRight: Radius.circular(4.ds),
-    bottomRight: Radius.circular(4.ds),
+  BorderRadius get br4 => BorderRadius.only(
+    topRight: Radius.circular(4 * _scale),
+    bottomRight: Radius.circular(4 * _scale),
   );
-  static BorderRadius br8 = BorderRadius.only(
-    topRight: Radius.circular(8.ds),
-    bottomRight: Radius.circular(8.ds),
+  BorderRadius get br8 => BorderRadius.only(
+    topRight: Radius.circular(8 * _scale),
+    bottomRight: Radius.circular(8 * _scale),
   );
-  static BorderRadius br12 = BorderRadius.only(
-    topRight: Radius.circular(12.ds),
-    bottomRight: Radius.circular(12.ds),
+  BorderRadius get br12 => BorderRadius.only(
+    topRight: Radius.circular(12 * _scale),
+    bottomRight: Radius.circular(12 * _scale),
   );
-  static BorderRadius br16 = BorderRadius.only(
-    topRight: Radius.circular(16.ds),
-    bottomRight: Radius.circular(16.ds),
+  BorderRadius get br16 => BorderRadius.only(
+    topRight: Radius.circular(16 * _scale),
+    bottomRight: Radius.circular(16 * _scale),
   );
-  static BorderRadius br24 = BorderRadius.only(
-    topRight: Radius.circular(24.ds),
-    bottomRight: Radius.circular(24.ds),
+  BorderRadius get br24 => BorderRadius.only(
+    topRight: Radius.circular(24 * _scale),
+    bottomRight: Radius.circular(24 * _scale),
   );
-  static BorderRadius br32 = BorderRadius.only(
-    topRight: Radius.circular(32.ds),
-    bottomRight: Radius.circular(32.ds),
+  BorderRadius get br32 => BorderRadius.only(
+    topRight: Radius.circular(32 * _scale),
+    bottomRight: Radius.circular(32 * _scale),
   );
 
   // border left
-  static BorderRadius bl4 = BorderRadius.only(
-    bottomLeft: Radius.circular(4.ds),
-    topLeft: Radius.circular(4.ds),
+  BorderRadius get bl4 => BorderRadius.only(
+    bottomLeft: Radius.circular(4 * _scale),
+    topLeft: Radius.circular(4 * _scale),
   );
-  static BorderRadius bl8 = BorderRadius.only(
-    bottomLeft: Radius.circular(8.ds),
-    topLeft: Radius.circular(8.ds),
+  BorderRadius get bl8 => BorderRadius.only(
+    bottomLeft: Radius.circular(8 * _scale),
+    topLeft: Radius.circular(8 * _scale),
   );
-  static BorderRadius bl12 = BorderRadius.only(
-    bottomLeft: Radius.circular(12.ds),
-    topLeft: Radius.circular(12.ds),
+  BorderRadius get bl12 => BorderRadius.only(
+    bottomLeft: Radius.circular(12 * _scale),
+    topLeft: Radius.circular(12 * _scale),
   );
-  static BorderRadius bl16 = BorderRadius.only(
-    bottomLeft: Radius.circular(16.ds),
-    topLeft: Radius.circular(16.ds),
+  BorderRadius get bl16 => BorderRadius.only(
+    bottomLeft: Radius.circular(16 * _scale),
+    topLeft: Radius.circular(16 * _scale),
   );
-  static BorderRadius bl24 = BorderRadius.only(
-    bottomLeft: Radius.circular(24.ds),
-    topLeft: Radius.circular(24.ds),
+  BorderRadius get bl24 => BorderRadius.only(
+    bottomLeft: Radius.circular(24 * _scale),
+    topLeft: Radius.circular(24 * _scale),
   );
-  static BorderRadius bl32 = BorderRadius.only(
-    bottomLeft: Radius.circular(32.ds),
-    topLeft: Radius.circular(32.ds),
+  BorderRadius get bl32 => BorderRadius.only(
+    bottomLeft: Radius.circular(32 * _scale),
+    topLeft: Radius.circular(32 * _scale),
   );
 
   ///////////////////////////// BORDER BY SIZE //////////////////////////////
 
-  static BorderRadius radiusNull = BorderRadius.zero;
-  static BorderRadius radiusXXS = bc2;
-  static BorderRadius radiusXS = bc4;
-  static BorderRadius radiusSM = bc8;
-  static BorderRadius radiusMD = bc12;
-  static BorderRadius radiusLG = bc16;
-  static BorderRadius radiusXL = bc24;
-  static BorderRadius radiusXXL = bc32;
+  BorderRadius get radiusNull => BorderRadius.zero;
+  BorderRadius get radiusXXS => bc2;
+  BorderRadius get radiusXS => bc4;
+  BorderRadius get radiusSM => bc8;
+  BorderRadius get radiusMD => bc12;
+  BorderRadius get radiusLG => bc16;
+  BorderRadius get radiusXL => bc24;
+  BorderRadius get radiusXXL => bc32;
+}
+
+extension ThemeBorderX on BuildContext {
+  ThemeBorder get themeBorder => ThemeBorder(dsScale);
 }

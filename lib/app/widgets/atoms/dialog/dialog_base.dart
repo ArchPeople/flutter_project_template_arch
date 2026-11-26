@@ -1,6 +1,5 @@
 import 'package:material_ui/material_ui.dart';
 import 'package:flutter_project_template_arch/app/assets/colors/asset_colors.dart';
-import 'package:flutter_project_template_arch/core/general_helpers/utils/screen_size_util.dart';
 import 'package:flutter_project_template_arch/app/themes/border/theme_border.dart';
 import 'package:flutter_project_template_arch/app/themes/padding/theme_padding.dart';
 
@@ -28,17 +27,18 @@ class DialogBase extends StatelessWidget {
       insetPadding: EdgeInsets.zero,
       backgroundColor: Colors.transparent,
       child: Container(
-        width: ScreenSizeUtil.getScreenWidth(),
-        margin: margin ?? ThemePadding.phLG,
+        width: MediaQuery.sizeOf(context).width,
+        margin: margin ?? context.themePadding.phLG,
         decoration: BoxDecoration(
           color: color ?? AssetColors.white,
-          borderRadius: borderRadius ?? ThemeBorder.radiusNull,
+          borderRadius: borderRadius ?? context.themeBorder.radiusNull,
         ),
-        padding: padding ?? ThemePadding.paLG,
+        padding: padding ?? context.themePadding.paLG,
         child: Column(
           crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min, children: children ?? []
-          ),
+          mainAxisSize: MainAxisSize.min,
+          children: children ?? [],
+        ),
       ),
     );
   }

@@ -9,7 +9,6 @@ import 'package:flutter_project_template_arch/app/global/system_mode/system_mode
 import 'package:flutter_project_template_arch/app/localizations/app_localizations.dart';
 import 'package:flutter_project_template_arch/core/dependencies/injection.dart';
 import 'package:flutter_project_template_arch/core/services/api_fetch/api_fetch.dart';
-import 'package:flutter_project_template_arch/core/general_helpers/utils/screen_size_util.dart';
 import 'package:flutter_project_template_arch/app/navigation/router.dart';
 import 'package:flutter_project_template_arch/app/themes/system_mode/theme_system_mode.dart';
 import 'package:flutter_project_template_arch/core/services/local_storage/local_storage.dart';
@@ -37,9 +36,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    /// Initialize dynamic screen size
-    ScreenSizeUtil.initializeScreenSize(context);
-
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => SystemModeCubit()),

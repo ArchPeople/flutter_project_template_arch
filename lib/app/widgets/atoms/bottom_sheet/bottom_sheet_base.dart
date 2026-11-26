@@ -24,9 +24,9 @@ class BottomSheetBase extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: color ?? AssetColors.white,
-        borderRadius: ThemeBorder.bt24
+        borderRadius: context.themeBorder.bt24,
       ),
-      padding: padding ?? ThemePadding.paNull,
+      padding: padding ?? context.themePadding.paNull,
       height: height,
       width: double.infinity,
       child: Column(

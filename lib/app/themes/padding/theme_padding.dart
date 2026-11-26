@@ -2,154 +2,160 @@ import 'package:material_ui/material_ui.dart';
 import 'package:flutter_project_template_arch/core/general_helpers/extensions/dynamic_size_extension.dart';
 
 class ThemePadding {
-  const ThemePadding._();
+  const ThemePadding(this._scale);
+
+  final double _scale;
 
   // Padding Horizontal
-  static EdgeInsets ph0 = EdgeInsets.symmetric(horizontal: 0.ds);
-  static EdgeInsets ph2 = EdgeInsets.symmetric(horizontal: 2.ds);
-  static EdgeInsets ph4 = EdgeInsets.symmetric(horizontal: 4.ds);
-  static EdgeInsets ph8 = EdgeInsets.symmetric(horizontal: 8.ds);
-  static EdgeInsets ph12 = EdgeInsets.symmetric(horizontal: 12.ds);
-  static EdgeInsets ph16 = EdgeInsets.symmetric(horizontal: 16.ds);
-  static EdgeInsets ph20 = EdgeInsets.symmetric(horizontal: 20.ds);
-  static EdgeInsets ph24 = EdgeInsets.symmetric(horizontal: 24.ds);
-  static EdgeInsets ph32 = EdgeInsets.symmetric(horizontal: 32.ds);
+  EdgeInsets get ph0 => EdgeInsets.symmetric(horizontal: 0 * _scale);
+  EdgeInsets get ph2 => EdgeInsets.symmetric(horizontal: 2 * _scale);
+  EdgeInsets get ph4 => EdgeInsets.symmetric(horizontal: 4 * _scale);
+  EdgeInsets get ph8 => EdgeInsets.symmetric(horizontal: 8 * _scale);
+  EdgeInsets get ph12 => EdgeInsets.symmetric(horizontal: 12 * _scale);
+  EdgeInsets get ph16 => EdgeInsets.symmetric(horizontal: 16 * _scale);
+  EdgeInsets get ph20 => EdgeInsets.symmetric(horizontal: 20 * _scale);
+  EdgeInsets get ph24 => EdgeInsets.symmetric(horizontal: 24 * _scale);
+  EdgeInsets get ph32 => EdgeInsets.symmetric(horizontal: 32 * _scale);
 
   // Padding Vertical
-  static EdgeInsets pv0 = EdgeInsets.symmetric(vertical: 0.ds);
-  static EdgeInsets pv2 = EdgeInsets.symmetric(vertical: 2.ds);
-  static EdgeInsets pv4 = EdgeInsets.symmetric(vertical: 4.ds);
-  static EdgeInsets pv8 = EdgeInsets.symmetric(vertical: 8.ds);
-  static EdgeInsets pv12 = EdgeInsets.symmetric(vertical: 12.ds);
-  static EdgeInsets pv16 = EdgeInsets.symmetric(vertical: 16.ds);
-  static EdgeInsets pv20 = EdgeInsets.symmetric(vertical: 20.ds);
-  static EdgeInsets pv24 = EdgeInsets.symmetric(vertical: 24.ds);
-  static EdgeInsets pv32 = EdgeInsets.symmetric(vertical: 32.ds);
+  EdgeInsets get pv0 => EdgeInsets.symmetric(vertical: 0 * _scale);
+  EdgeInsets get pv2 => EdgeInsets.symmetric(vertical: 2 * _scale);
+  EdgeInsets get pv4 => EdgeInsets.symmetric(vertical: 4 * _scale);
+  EdgeInsets get pv8 => EdgeInsets.symmetric(vertical: 8 * _scale);
+  EdgeInsets get pv12 => EdgeInsets.symmetric(vertical: 12 * _scale);
+  EdgeInsets get pv16 => EdgeInsets.symmetric(vertical: 16 * _scale);
+  EdgeInsets get pv20 => EdgeInsets.symmetric(vertical: 20 * _scale);
+  EdgeInsets get pv24 => EdgeInsets.symmetric(vertical: 24 * _scale);
+  EdgeInsets get pv32 => EdgeInsets.symmetric(vertical: 32 * _scale);
 
   // Padding All
-  static EdgeInsets pa0 = EdgeInsets.all(0.ds);
-  static EdgeInsets pa2 = EdgeInsets.all(2.ds);
-  static EdgeInsets pa4 = EdgeInsets.all(4.ds);
-  static EdgeInsets pa8 = EdgeInsets.all(8.ds);
-  static EdgeInsets pa12 = EdgeInsets.all(12.ds);
-  static EdgeInsets pa16 = EdgeInsets.all(16.ds);
-  static EdgeInsets pa20 = EdgeInsets.all(20.ds);
-  static EdgeInsets pa24 = EdgeInsets.all(24.ds);
-  static EdgeInsets pa32 = EdgeInsets.all(32.ds);
+  EdgeInsets get pa0 => EdgeInsets.all(0 * _scale);
+  EdgeInsets get pa2 => EdgeInsets.all(2 * _scale);
+  EdgeInsets get pa4 => EdgeInsets.all(4 * _scale);
+  EdgeInsets get pa8 => EdgeInsets.all(8 * _scale);
+  EdgeInsets get pa12 => EdgeInsets.all(12 * _scale);
+  EdgeInsets get pa16 => EdgeInsets.all(16 * _scale);
+  EdgeInsets get pa20 => EdgeInsets.all(20 * _scale);
+  EdgeInsets get pa24 => EdgeInsets.all(24 * _scale);
+  EdgeInsets get pa32 => EdgeInsets.all(32 * _scale);
 
   // Padding only bottom
-  static EdgeInsets pb0 = EdgeInsets.only(bottom: 0.ds);
-  static EdgeInsets pb2 = EdgeInsets.only(bottom: 2.ds);
-  static EdgeInsets pb4 = EdgeInsets.only(bottom: 4.ds);
-  static EdgeInsets pb8 = EdgeInsets.only(bottom: 8.ds);
-  static EdgeInsets pb12 = EdgeInsets.only(bottom: 12.ds);
-  static EdgeInsets pb16 = EdgeInsets.only(bottom: 16.ds);
-  static EdgeInsets pb20 = EdgeInsets.only(bottom: 20.ds);
-  static EdgeInsets pb24 = EdgeInsets.only(bottom: 24.ds);
-  static EdgeInsets pb32 = EdgeInsets.only(bottom: 32.ds);
+  EdgeInsets get pb0 => EdgeInsets.only(bottom: 0 * _scale);
+  EdgeInsets get pb2 => EdgeInsets.only(bottom: 2 * _scale);
+  EdgeInsets get pb4 => EdgeInsets.only(bottom: 4 * _scale);
+  EdgeInsets get pb8 => EdgeInsets.only(bottom: 8 * _scale);
+  EdgeInsets get pb12 => EdgeInsets.only(bottom: 12 * _scale);
+  EdgeInsets get pb16 => EdgeInsets.only(bottom: 16 * _scale);
+  EdgeInsets get pb20 => EdgeInsets.only(bottom: 20 * _scale);
+  EdgeInsets get pb24 => EdgeInsets.only(bottom: 24 * _scale);
+  EdgeInsets get pb32 => EdgeInsets.only(bottom: 32 * _scale);
 
   // Padding only top
-  static EdgeInsets pt0 = EdgeInsets.only(top: 0.ds);
-  static EdgeInsets pt2 = EdgeInsets.only(top: 2.ds);
-  static EdgeInsets pt4 = EdgeInsets.only(top: 4.ds);
-  static EdgeInsets pt8 = EdgeInsets.only(top: 8.ds);
-  static EdgeInsets pt12 = EdgeInsets.only(top: 12.ds);
-  static EdgeInsets pt16 = EdgeInsets.only(top: 16.ds);
-  static EdgeInsets pt20 = EdgeInsets.only(top: 20.ds);
-  static EdgeInsets pt24 = EdgeInsets.only(top: 24.ds);
-  static EdgeInsets pt32 = EdgeInsets.only(top: 32.ds);
+  EdgeInsets get pt0 => EdgeInsets.only(top: 0 * _scale);
+  EdgeInsets get pt2 => EdgeInsets.only(top: 2 * _scale);
+  EdgeInsets get pt4 => EdgeInsets.only(top: 4 * _scale);
+  EdgeInsets get pt8 => EdgeInsets.only(top: 8 * _scale);
+  EdgeInsets get pt12 => EdgeInsets.only(top: 12 * _scale);
+  EdgeInsets get pt16 => EdgeInsets.only(top: 16 * _scale);
+  EdgeInsets get pt20 => EdgeInsets.only(top: 20 * _scale);
+  EdgeInsets get pt24 => EdgeInsets.only(top: 24 * _scale);
+  EdgeInsets get pt32 => EdgeInsets.only(top: 32 * _scale);
 
   // Padding Only Top Spacing
-  static EdgeInsets ptNull = pt0;
-  static EdgeInsets ptXXS = pt2;
-  static EdgeInsets ptXS = pt4;
-  static EdgeInsets ptSM = pt8;
-  static EdgeInsets ptMD = pt12;
-  static EdgeInsets ptLG = pt16;
-  static EdgeInsets ptXL = pt24;
-  static EdgeInsets ptXXL = pt32;
+  EdgeInsets get ptNull => pt0;
+  EdgeInsets get ptXXS => pt2;
+  EdgeInsets get ptXS => pt4;
+  EdgeInsets get ptSM => pt8;
+  EdgeInsets get ptMD => pt12;
+  EdgeInsets get ptLG => pt16;
+  EdgeInsets get ptXL => pt24;
+  EdgeInsets get ptXXL => pt32;
 
   // Padding only left
-  static EdgeInsets pl0 = EdgeInsets.only(left: 0.ds);
-  static EdgeInsets pl2 = EdgeInsets.only(left: 2.ds);
-  static EdgeInsets pl4 = EdgeInsets.only(left: 4.ds);
-  static EdgeInsets pl8 = EdgeInsets.only(left: 8.ds);
-  static EdgeInsets pl12 = EdgeInsets.only(left: 12.ds);
-  static EdgeInsets pl16 = EdgeInsets.only(left: 16.ds);
-  static EdgeInsets pl20 = EdgeInsets.only(left: 20.ds);
-  static EdgeInsets pl24 = EdgeInsets.only(left: 24.ds);
-  static EdgeInsets pl32 = EdgeInsets.only(left: 32.ds);
+  EdgeInsets get pl0 => EdgeInsets.only(left: 0 * _scale);
+  EdgeInsets get pl2 => EdgeInsets.only(left: 2 * _scale);
+  EdgeInsets get pl4 => EdgeInsets.only(left: 4 * _scale);
+  EdgeInsets get pl8 => EdgeInsets.only(left: 8 * _scale);
+  EdgeInsets get pl12 => EdgeInsets.only(left: 12 * _scale);
+  EdgeInsets get pl16 => EdgeInsets.only(left: 16 * _scale);
+  EdgeInsets get pl20 => EdgeInsets.only(left: 20 * _scale);
+  EdgeInsets get pl24 => EdgeInsets.only(left: 24 * _scale);
+  EdgeInsets get pl32 => EdgeInsets.only(left: 32 * _scale);
 
   // Padding only right
-  static EdgeInsets pr0 = EdgeInsets.only(right: 0.ds);
-  static EdgeInsets pr2 = EdgeInsets.only(right: 2.ds);
-  static EdgeInsets pr4 = EdgeInsets.only(right: 4.ds);
-  static EdgeInsets pr8 = EdgeInsets.only(right: 8.ds);
-  static EdgeInsets pr12 = EdgeInsets.only(right: 12.ds);
-  static EdgeInsets pr16 = EdgeInsets.only(right: 16.ds);
-  static EdgeInsets pr20 = EdgeInsets.only(right: 20.ds);
-  static EdgeInsets pr24 = EdgeInsets.only(right: 24.ds);
-  static EdgeInsets pr32 = EdgeInsets.only(right: 32.ds);
+  EdgeInsets get pr0 => EdgeInsets.only(right: 0 * _scale);
+  EdgeInsets get pr2 => EdgeInsets.only(right: 2 * _scale);
+  EdgeInsets get pr4 => EdgeInsets.only(right: 4 * _scale);
+  EdgeInsets get pr8 => EdgeInsets.only(right: 8 * _scale);
+  EdgeInsets get pr12 => EdgeInsets.only(right: 12 * _scale);
+  EdgeInsets get pr16 => EdgeInsets.only(right: 16 * _scale);
+  EdgeInsets get pr20 => EdgeInsets.only(right: 20 * _scale);
+  EdgeInsets get pr24 => EdgeInsets.only(right: 24 * _scale);
+  EdgeInsets get pr32 => EdgeInsets.only(right: 32 * _scale);
 
   ///////////////////////////// PADDING SPACING BY SIZE //////////////////////////////
 
   // Padding Horizontal Spacing
-  static EdgeInsets phNull = ph0;
-  static EdgeInsets phXXS = ph2;
-  static EdgeInsets phXS = ph4;
-  static EdgeInsets phSM = ph8;
-  static EdgeInsets phMD = ph12;
-  static EdgeInsets phLG = ph16;
-  static EdgeInsets phXL = ph24;
-  static EdgeInsets phXXL = ph32;
+  EdgeInsets get phNull => ph0;
+  EdgeInsets get phXXS => ph2;
+  EdgeInsets get phXS => ph4;
+  EdgeInsets get phSM => ph8;
+  EdgeInsets get phMD => ph12;
+  EdgeInsets get phLG => ph16;
+  EdgeInsets get phXL => ph24;
+  EdgeInsets get phXXL => ph32;
 
   // Padding Vertical Spacing
-  static EdgeInsets pvNull = pv0;
-  static EdgeInsets pvXXS = pv2;
-  static EdgeInsets pvXS = pv4;
-  static EdgeInsets pvSM = pv8;
-  static EdgeInsets pvMD = pv12;
-  static EdgeInsets pvLG = pv16;
-  static EdgeInsets pvXL = pv24;
-  static EdgeInsets pvXXL = pv32;
+  EdgeInsets get pvNull => pv0;
+  EdgeInsets get pvXXS => pv2;
+  EdgeInsets get pvXS => pv4;
+  EdgeInsets get pvSM => pv8;
+  EdgeInsets get pvMD => pv12;
+  EdgeInsets get pvLG => pv16;
+  EdgeInsets get pvXL => pv24;
+  EdgeInsets get pvXXL => pv32;
 
   // Padding All Spacing
-  static EdgeInsets paNull = pa0;
-  static EdgeInsets paXXS = pa2;
-  static EdgeInsets paXS = pa4;
-  static EdgeInsets paSM = pa8;
-  static EdgeInsets paMD = pa12;
-  static EdgeInsets paLG = pa16;
-  static EdgeInsets paXL = pa24;
-  static EdgeInsets paXXL = pa32;
+  EdgeInsets get paNull => pa0;
+  EdgeInsets get paXXS => pa2;
+  EdgeInsets get paXS => pa4;
+  EdgeInsets get paSM => pa8;
+  EdgeInsets get paMD => pa12;
+  EdgeInsets get paLG => pa16;
+  EdgeInsets get paXL => pa24;
+  EdgeInsets get paXXL => pa32;
 
   // Padding Only Bottom Spacing
-  static EdgeInsets pbNull = pb0;
-  static EdgeInsets pbXXS = pb2;
-  static EdgeInsets pbXS = pb4;
-  static EdgeInsets pbSM = pb8;
-  static EdgeInsets pbMD = pb12;
-  static EdgeInsets pbLG = pb16;
-  static EdgeInsets pbXL = pb24;
-  static EdgeInsets pbXXL = pb32;
+  EdgeInsets get pbNull => pb0;
+  EdgeInsets get pbXXS => pb2;
+  EdgeInsets get pbXS => pb4;
+  EdgeInsets get pbSM => pb8;
+  EdgeInsets get pbMD => pb12;
+  EdgeInsets get pbLG => pb16;
+  EdgeInsets get pbXL => pb24;
+  EdgeInsets get pbXXL => pb32;
 
   // Padding Only Left Spacing
-  static EdgeInsets plNull = pl0;
-  static EdgeInsets plXXS = pl2;
-  static EdgeInsets plXS = pl4;
-  static EdgeInsets plSM = pl8;
-  static EdgeInsets plMD = pl12;
-  static EdgeInsets plLG = pl16;
-  static EdgeInsets plXL = pl24;
-  static EdgeInsets plXXL = pl32;
+  EdgeInsets get plNull => pl0;
+  EdgeInsets get plXXS => pl2;
+  EdgeInsets get plXS => pl4;
+  EdgeInsets get plSM => pl8;
+  EdgeInsets get plMD => pl12;
+  EdgeInsets get plLG => pl16;
+  EdgeInsets get plXL => pl24;
+  EdgeInsets get plXXL => pl32;
 
   // Padding Only Right Spacing
-  static EdgeInsets prNull = pr0;
-  static EdgeInsets prXXS = pr2;
-  static EdgeInsets prXS = pr4;
-  static EdgeInsets prSM = pr8;
-  static EdgeInsets prMD = pr12;
-  static EdgeInsets prLG = pr16;
-  static EdgeInsets prXL = pr24;
-  static EdgeInsets prXXL = pr32;
+  EdgeInsets get prNull => pr0;
+  EdgeInsets get prXXS => pr2;
+  EdgeInsets get prXS => pr4;
+  EdgeInsets get prSM => pr8;
+  EdgeInsets get prMD => pr12;
+  EdgeInsets get prLG => pr16;
+  EdgeInsets get prXL => pr24;
+  EdgeInsets get prXXL => pr32;
+}
+
+extension ThemePaddingX on BuildContext {
+  ThemePadding get themePadding => ThemePadding(dsScale);
 }
