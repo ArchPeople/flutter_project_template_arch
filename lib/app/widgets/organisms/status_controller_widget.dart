@@ -25,23 +25,23 @@ class StatusControllerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: ThemePadding.pa16,
+      padding: context.themePadding.pa16,
       decoration: BoxDecoration(
-        borderRadius: ThemeBorder.bc8,
-        border: BoxBorder.all(width: 1.ds, color: AssetColors.grey),
+        borderRadius: context.themeBorder.bc8,
+        border: BoxBorder.all(width: context.ds(1), color: AssetColors.grey),
       ),
       child: SizedBox(
         width: double.infinity,
         child: Column(
           children: [
             Container(
-              height: 40.ds,
+              height: context.ds(40),
               decoration: BoxDecoration(
                 color: statusColor,
-                borderRadius: ThemeBorder.bc4,
+                borderRadius: context.themeBorder.bc4,
               ),
             ),
-            Gap.height(20.ds),
+            Gap.height(context.ds(20)),
             ActionPanel(
               title: title,
               buttonLabel: buttonLabel,

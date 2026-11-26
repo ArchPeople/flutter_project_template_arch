@@ -17,7 +17,6 @@ import 'package:flutter_project_template_arch/app/widgets/atoms/pressable/pressa
 import 'package:flutter_project_template_arch/app/widgets/atoms/text/text_base.dart';
 import 'package:flutter_project_template_arch/core/general_helpers/extensions/dynamic_size_extension.dart';
 import 'package:flutter_project_template_arch/core/general_helpers/extensions/localization_extension.dart';
-import 'package:flutter_project_template_arch/core/general_helpers/utils/screen_size_util.dart';
 
 class LandingIntroductionSection extends StatefulWidget {
   const LandingIntroductionSection({super.key});
@@ -37,6 +36,7 @@ class _LandingIntroductionSectionState
     return BlocBuilder<SystemModeCubit, SystemModeState>(
       builder: (context, state) {
         AppLocalizations tr = context.l10n;
+        final fonts = context.themeFont;
 
         return AnimatedContainer(
           duration: const Duration(milliseconds: 300),
@@ -56,32 +56,38 @@ class _LandingIntroductionSectionState
             ),
           ),
           child: Padding(
-            padding: ThemePadding.phXXL,
+            padding: context.themePadding.phXXL,
             child: Column(
               children: [
-                Gap.height(150.ds),
+                Gap.height(context.ds(context.isTablet ? 50 : 150)),
                 Image.asset(
                   gaplessPlayback: true,
                   state.systemMode == ThemeMode.light
                       ? AssetImages.archLogoBlack
                       : AssetImages.archLogoWhite,
-                  height: 80.ds,
+                  height: context.ds(context.isTablet ? 60 : 80),
                 ),
-                Gap.height(80.ds),
+                Gap.height(context.ds(context.isTablet ? 40 : 80)),
                 TextBase(
                   label: context.l10n.welcomeMessage('Arch'),
-                  style: ThemeFonts.h4ExtraBold,
+                  style: context.isTablet
+                      ? fonts.h5ExtraBold
+                      : fonts.h4ExtraBold,
                 ),
-                Gap.height(20.ds),
+                Gap.height(context.ds(20)),
                 TextBase(
                   label: tr.introductionMessage,
                   textAlign: TextAlign.center,
-                  style: ThemeFonts.bodySmLight,
+                  style: context.isTablet
+                      ? fonts.bodyXsLight
+                      : fonts.bodySmLight,
                 ),
-                Gap.height(40.ds),
+                Gap.height(context.ds(context.isTablet ? 30 : 40)),
                 ButtonBase(
-                  width: 180.ds,
+                  height: context.isTablet ? null : 50,
+                  width: context.ds(180),
                   label: 'Demo Feature',
+                  labelStyle: context.isTablet ? fonts.bodySmLight : null,
                   onPressed: () {
                     router.push(NavigationPath.demoFeature);
                   },
@@ -89,12 +95,12 @@ class _LandingIntroductionSectionState
                 Spacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  spacing: 20.ds,
+                  spacing: context.ds(20),
                   children: [
                     Pressablebase(
                       child: TextBase(
                         label: '🇬🇧',
-                        style: ThemeFonts.bodyLgRegular,
+                        style: fonts.bodyLgRegular,
                       ),
                       onTap: () {
                         _localeCubit.setLocale(const Locale('en'));
@@ -103,7 +109,7 @@ class _LandingIntroductionSectionState
                     Pressablebase(
                       child: TextBase(
                         label: '🇫🇷',
-                        style: ThemeFonts.bodyLgRegular,
+                        style: fonts.bodyLgRegular,
                       ),
                       onTap: () {
                         _localeCubit.setLocale(const Locale('fr'));
@@ -111,7 +117,7 @@ class _LandingIntroductionSectionState
                     ),
                   ],
                 ),
-                Gap.height(20.ds),
+                Gap.height(context.ds(20)),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -122,11 +128,11 @@ class _LandingIntroductionSectionState
                       child: TextBase(
                         label: tr.lightMode,
                         style: state.systemMode == ThemeSystemMode.light
-                            ? ThemeFonts.bodyXsMedium
-                            : ThemeFonts.bodyXsLight,
+                            ? fonts.bodyXsMedium
+                            : fonts.bodyXsLight,
                       ),
                     ),
-                    TextBase(label: ' | ', style: ThemeFonts.bodySmLight),
+                    TextBase(label: ' | ', style: fonts.bodySmLight),
                     InkBase(
                       onTap: () {
                         _systemModeCubit.setMode(Brightness.dark);
@@ -134,15 +140,25 @@ class _LandingIntroductionSectionState
                       child: TextBase(
                         label: tr.darkMode,
                         style: state.systemMode == ThemeSystemMode.dark
-                            ? ThemeFonts.bodyXsMedium
-                            : ThemeFonts.bodyXsLight,
+                            ? fonts.bodyXsMedium
+                            : fonts.bodyXsLight,
                       ),
                     ),
                   ],
                 ),
-                Gap.height(20.ds),
-                TextBase(label: 'ver 2.5.0', style: ThemeFonts.bodyXsLight),
-                Gap.height(ScreenSizeUtil.getBottomBarHeight().ds + 20.ds),
+                Gap.height(context.ds(20)),
+                TextBase(
+                  label: 'ver 2.6.0',
+                  style: context.isTablet
+                      ? fonts.captionLight
+                      : fonts.bodyXsLight,
+                ),
+                Gap.height(
+                  context.ds(
+                    MediaQuery.viewPaddingOf(context).bottom +
+                        (context.isTablet ? 0 : 20),
+                  ),
+                ),
               ],
             ),
           ),

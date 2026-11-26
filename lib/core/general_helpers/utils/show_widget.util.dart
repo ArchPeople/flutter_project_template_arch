@@ -1,11 +1,13 @@
 import 'package:material_ui/material_ui.dart';
-import 'package:flutter_project_template_arch/core/general_helpers/utils/screen_size_util.dart';
 import 'package:flutter_project_template_arch/app/themes/padding/theme_padding.dart';
 import 'package:flutter_project_template_arch/app/widgets/atoms/bottom_sheet/bottom_sheet_base.dart';
 import 'package:flutter_project_template_arch/app/widgets/atoms/dialog/dialog_base.dart';
 
 class ShowWidgetUtil {
   ShowWidgetUtil._();
+
+  static double _maxBottomSheetHeight(BuildContext context) =>
+      MediaQuery.sizeOf(context).height - MediaQuery.viewPaddingOf(context).top;
 
   /// Bottom Sheet
   static Future<void> dynamicBottomSheet({
@@ -24,13 +26,13 @@ class ShowWidgetUtil {
       enableDrag: enableDrag ?? true,
       isScrollControlled: height != null ? true : false,
       builder: (context) {
+        final maxHeight = _maxBottomSheetHeight(context);
         return BottomSheetBase(
           color: color,
-          padding: padding ?? ThemePadding.paNull,
+          padding: padding ?? context.themePadding.paNull,
           height: height != null
-              ? height >= ScreenSizeUtil.getScreenHeight()
-                    ? (ScreenSizeUtil.getScreenHeight() -
-                          ScreenSizeUtil.getStatusBarHeight())
+              ? height >= MediaQuery.sizeOf(context).height
+                    ? maxHeight
                     : height
               : null,
           crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.center,
@@ -56,10 +58,8 @@ class ShowWidgetUtil {
       builder: (BuildContext context) {
         return BottomSheetBase(
           color: color,
-          padding: padding ?? ThemePadding.paNull,
-          height:
-              ScreenSizeUtil.getScreenHeight() -
-              ScreenSizeUtil.getStatusBarHeight(),
+          padding: padding ?? context.themePadding.paNull,
+          height: _maxBottomSheetHeight(context),
           crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.center,
           children: children,
         );

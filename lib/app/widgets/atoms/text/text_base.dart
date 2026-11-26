@@ -58,10 +58,10 @@ class TextBase extends StatelessWidget {
             maxLines: maxLines,
             softWrap: softWrap,
             overflow: overflow,
-            style: ThemeFonts.defaultTextBase
+            style: context.themeFont.defaultTextBase
                 .merge(TextStyle(color: getColor(state.systemMode)))
                 .merge(style)
-                .merge(ThemeFonts.fh1_5),
+                .merge(context.themeFont.fh1_5),
           ),
         );
       },
